@@ -3,12 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js");document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(!window.madarReady)document.documentElement.classList.remove("js")},0)});(function(){var s;try{s=localStorage.getItem("madar-lang")}catch(e){s="unavailable"}var t=(function englishTarget({ path, search = '', hash = '', stored, referrer = '', origin = '', languages, userAgent = '' }) {
+  if (stored !== null && stored !== undefined) return null;
+  if (path === '/en' || path.startsWith('/en/')) return null;
+  if (/bot|crawl|spider|slurp|mediapartners|lighthouse|headless|preview|facebookexternalhit|embedly|whatsapp|telegram|discord|linkedin|pinterest|validator/i.test(userAgent)) return null;
+  if (origin && (referrer === `${origin}/en` || referrer.startsWith(`${origin}/en/`))) return null;
+  const list = (languages || []).filter((code) => typeof code === 'string' && code !== '');
+  if (!list.length || list.some((code) => /^ar(-|$)/i.test(code))) return null;
+  return `/en${path}${search}${hash}`;
+})({path:location.pathname,search:location.search,hash:location.hash,stored:s,referrer:document.referrer,origin:location.origin,languages:navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language],userAgent:navigator.userAgent});if(t){document.documentElement.style.visibility="hidden";location.replace(t)}})();</script>
 <title>معرض الأعمال: نماذج توضيحية ببيانات مفتوحة | مدار</title>
 <meta name="description" content="نماذج توضيحية لخدمات مدار، مبنية من بيانات مفتوحة ومذكور مصدرها وترخيصها. ليست مشاريع لعملاء.">
 <link rel="canonical" href="https://madargis.github.io/portfolio/">
 <link rel="alternate" hreflang="ar" href="https://madargis.github.io/portfolio/">
 <link rel="alternate" hreflang="en" href="https://madargis.github.io/en/portfolio/">
-<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/portfolio/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/en/portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="مدار للحلول الجيومكانية">
 <meta property="og:title" content="معرض الأعمال: نماذج توضيحية ببيانات مفتوحة | مدار">
@@ -25,7 +34,7 @@
 <link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"مدار للحلول الجيومكانية","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"بيانات مكانية تثق فيها","description":"مكتب رقمي صغير يقدم خدمات جيومكانية تُسلَّم عن بعد، ويبني أدوات تختصر شغل GIS اليومي.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
@@ -33,191 +42,235 @@
 <body>
 <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
 <header class="site-header field-navy" id="top">
-<div class="wrap bar">
+<div class="bar">
 <a class="wordmark" href="/" aria-label="مدار: الصفحة الرئيسية"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>مدار</span></a>
 <nav class="nav" aria-label="التنقل الرئيسي"><ul><li><a href="/services/">الخدمات</a></li><li><a href="/tools/">الأدوات</a></li><li><a href="/portfolio/" aria-current="page">معرض الأعمال</a></li><li><a href="/about/">عن مدار</a></li></ul></nav>
 <div class="bar-actions">
-<a class="lang-switch" href="/en/portfolio/" lang="en" hreflang="en">English</a>
-<a class="button" href="/request/">اطلب خدمة</a>
+<a class="lang-switch" href="/en/portfolio/" lang="en" hreflang="en" data-lang="en">English</a>
+<a class="button button-small" href="/request/"><span class="label-long">اطلب خدمة</span><span class="label-short">اطلب خدمة</span></a>
 </div>
 </div>
 </header>
 <main id="main">
 <section class="masthead masthead-large field-navy">
-<div class="wrap">
+<span class="masthead-art" aria-hidden="true"></span>
+<div class="wrap masthead-inner">
 
-<h1>معرض الأعمال</h1>
-<div class="masthead-body"><p class="lead">كل نموذج هنا يطبق خدمة على بيانات مفتوحة، ويذكر مصدرها وترخيصها وحدود نتيجته.</p><div class="masthead-foot"><p class="regulated"><mark>نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</mark></p></div></div>
+<h1 class="rise">معرض الأعمال</h1>
+<div class="masthead-body rise"><p class="lead">كل نموذج هنا يطبق خدمة على بيانات مفتوحة، ويذكر مصدرها وترخيصها وحدود نتيجته.</p><p class="regulated"><mark>نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</mark></p></div>
 </div>
+</section>
+<section class="atlas field-deep" aria-labelledby="atlas-title">
+<div class="wrap atlas-head" data-reveal><h2 id="atlas-title">النماذج على الخريطة</h2><p>كل نقطة نموذج في موقعه. مرّر المؤشر أو انتقل بزر Tab إلى نقطة لترى صورتها ورقمها، وافتحها لقراءة النموذج كاملًا.</p></div>
+<div class="atlas-frame">
+<img class="atlas-poster" src="/assets/region.svg" alt="خريطة شبه الجزيرة العربية وعليها مواقع نماذج معرض الأعمال نقاطًا فيروزية." width="1600" height="1360" decoding="async">
+<div class="atlas-map" dir="ltr" data-atlas role="region" aria-label="خريطة تفاعلية لمواقع نماذج معرض الأعمال"></div>
+<div class="atlas-card field-paper" data-atlas-card hidden></div>
+</div>
+<div class="wrap"><p class="map-credit">الخرائط الحية: <a href="https://www.openstreetmap.org/copyright">OpenFreeMap © OpenMapTiles, data © OpenStreetMap contributors</a>. Natural Earth. Relief: Terrain Tiles (Mapzen, AWS Open Data) from SRTM and GMTED2010 (USGS) and ETOPO1 (NOAA).</p></div>
 </section>
 <section class="chapter field-sand" aria-labelledby="portfolio-list">
 <div class="wrap">
-<h2 id="portfolio-list">النماذج</h2>
-<ul class="cases" role="list"><li class="case">
-<a class="case-link" href="/portfolio/alteration-mapping/">
-<img src="/portfolio/alteration-mapping/alteration_candidates.png" alt="غلاف النموذج: فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9" width="1600" height="1600" loading="lazy" decoding="async">
-<span class="case-title">فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9</span>
+<div class="chapter-head" data-reveal><h2 id="portfolio-list">النماذج</h2><p>كل نموذج يذكر مصدر بياناته وترخيصها وحدود نتيجته.</p></div>
+<ul class="tiles" role="list"><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/alteration-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/alteration-mapping/alteration_candidates-960.webp" type="image/webp"><img src="/portfolio/alteration-mapping/alteration_candidates.png" alt="غلاف النموذج: فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9" width="1600" height="1600" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9</span>
 </a>
-<p>حسبنا نسب نطاقات أكاسيد الحديد والطين من مشهد Landsat 9 صافٍ على نافذة 30 × 30 كم حول منجم مهد الذهب. تتداخل القيم العالية في النسبتين على 0.7 كم²، و19% منها خلال 2 كم من سجلّي المنجم.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/automation-batch-toolkit/">
-<img src="/portfolio/automation-batch-toolkit/folders_before_after.png" alt="غلاف النموذج: معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار" width="1600" height="1100" loading="lazy" decoding="async">
-<span class="case-title">معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="7.0">7.0</span><span class="figure-unit">أضعاف</span></span><span class="figure-label">تركز تداخل الأكاسيد والطين قرب سجلّي مهد الذهب</span></p>
+<p class="tile-meta"><span class="coords">23.48° ش · 40.86° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/automation-batch-toolkit/">
+<span class="tile-media"><picture><source srcset="/portfolio/automation-batch-toolkit/folders_before_after-960.webp" type="image/webp"><img src="/portfolio/automation-batch-toolkit/folders_before_after.png" alt="غلاف النموذج: معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار" width="1600" height="1100" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار</span>
 </a>
-<p>جهزنا 26 طبقة مفتوحة بثلاث صيغ وخمسة أنظمة إحداثيات، ومررناها بإعادة الإسقاط والقص والتحويل والدمج وتقرير المساحات. استغرقت الخطوات الخمس 15.7 ثانية على هذا الجهاز.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/branch-site-selection/">
-<img src="/portfolio/branch-site-selection/candidate_score_map.png" alt="غلاف النموذج: ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض" width="1600" height="1200" loading="lazy" decoding="async">
-<span class="case-title">ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="15.7">15.7</span><span class="figure-unit">ث</span></span><span class="figure-label">لتشغيل خمسة أوامر على 26 طبقة</span></p>
+<p class="tile-meta"><span class="coords">24.67° ش · 46.74° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/branch-site-selection/">
+<span class="tile-media"><picture><source srcset="/portfolio/branch-site-selection/candidate_score_map-960.webp" type="image/webp"><img src="/portfolio/branch-site-selection/candidate_score_map.png" alt="غلاف النموذج: ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض" width="1600" height="1200" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض</span>
 </a>
-<p>قيّمنا 176 موقعًا على الطرق الرئيسية في الحي بأربعة معايير معلنة الأوزان. أعلى موقع حصل على 0.71 من 1، ويصل إليه مشيًا خلال 10 دقائق نحو 9,021 نسمة بتقدير WorldPop.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/building-change-detection/">
-<img src="/portfolio/building-change-detection/new_built_up.png" alt="غلاف النموذج: رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026" width="1600" height="1700" loading="lazy" decoding="async">
-<span class="case-title">رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="0.71">0.71</span></span><span class="figure-label">درجة أفضل موقع للمقهى من 1</span></p>
+<p class="tile-meta"><span class="coords">24.80° ش · 46.60° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/building-change-detection/">
+<span class="tile-media"><picture><source srcset="/portfolio/building-change-detection/new_built_up-960.webp" type="image/webp"><img src="/portfolio/building-change-detection/new_built_up.png" alt="غلاف النموذج: رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026" width="1600" height="1700" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026</span>
 </a>
-<p>مشهدان من Sentinel-2 بينهما تسع سنوات يكشفان 1,128 هكتارًا من النسيج العمراني الجديد داخل حي النرجس (4,816 هكتارًا). في عينة من 100 موقع مكتشف داخل الجزء المرسوم في OpenStreetMap، وُجد مبنى على بعد 15 م أو أقل في 50 موقعًا.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/cad-to-gis-riyadh-block/">
-<img src="/portfolio/cad-to-gis-riyadh-block/datum_offset_map.png" alt="غلاف النموذج: تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض" width="1600" height="1000" loading="lazy" decoding="async">
-<span class="case-title">تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="1,128">1,128</span><span class="figure-unit">هكتار</span></span><span class="figure-label">نسيج عمراني جديد بين 2017 و2026</span></p>
+<p class="tile-meta"><span class="coords">24.89° ش · 46.64° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/cad-to-gis-riyadh-block/">
+<span class="tile-media"><picture><source srcset="/portfolio/cad-to-gis-riyadh-block/datum_offset_map-960.webp" type="image/webp"><img src="/portfolio/cad-to-gis-riyadh-block/datum_offset_map.png" alt="غلاف النموذج: تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض" width="1600" height="1000" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض</span>
 </a>
-<p>قرأنا ملف DXF بطبقات CAD في نظام عين العبد وأعدنا بناءه طبقات GIS بخصائصها في GeoPackage بنظام KSA-GRF17. تغيير اسم النظام دون تحويل يزيح كل نقطة 75.7 م.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/dem-contours/">
-<img src="/portfolio/dem-contours/contours_platform.png" alt="غلاف النموذج: كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM" width="1600" height="1600" loading="lazy" decoding="async">
-<span class="case-title">كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="75.67">75.67</span><span class="figure-unit">م</span></span><span class="figure-label">إزاحة بين التحويل الصحيح وتغيير اسم النظام</span></p>
+<p class="tile-meta"><span class="coords">24.71° ش · 46.67° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/coastal-mangrove-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/coastal-mangrove-mapping/mangrove_change-960.webp" type="image/webp"><img src="/portfolio/coastal-mangrove-mapping/mangrove_change.png" alt="غلاف النموذج: تغير المانغروف في شمال خليج تاروت بين صفوى ورأس تنورة: ديسمبر 2017 إلى يناير 2026" width="1600" height="1650" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">تغير المانغروف في شمال خليج تاروت بين صفوى ورأس تنورة: ديسمبر 2017 إلى يناير 2026</span>
 </a>
-<p>من نموذج NASADEM رسمنا كنتورًا بفاصل 10 م لنافذة 3 × 3 كم، ومقطعًا بطول 1 كم، وحسبنا الحفر والردم لمنصة افتراضية 150 × 100 م على سفح انحداره 7.1°. عند المنسوب المتوازن 1,055.0 م يبلغ الحفر 31,061 م³ ويساويه الردم.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/flood-exposure-screening/">
-<img src="/portfolio/flood-exposure-screening/building_exposure.png" alt="غلاف النموذج: فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية" width="1600" height="1620" loading="lazy" decoding="async">
-<span class="case-title">فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="102">102</span><span class="figure-unit">هكتار</span></span><span class="figure-label">صافي زيادة المانغروف بين 2017 و2026</span></p>
+<p class="tile-meta"><span class="coords">26.70° ش · 50.01° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/dem-contours/">
+<span class="tile-media"><picture><source srcset="/portfolio/dem-contours/contours_platform-960.webp" type="image/webp"><img src="/portfolio/dem-contours/contours_platform.png" alt="غلاف النموذج: كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM" width="1600" height="1600" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM</span>
 </a>
-<p>صنفنا 2,902 مبنى من OpenStreetMap في محايل عسير حسب ارتفاعها فوق أقرب مجرى وادٍ وبعدها عنه، من نموذج NASADEM. وقع 71 مبنى في الفئة العالية و295 في المتوسطة.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/geodatabase-design/">
-<img src="/portfolio/geodatabase-design/schema_diagram.png" alt="غلاف النموذج: نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة" width="1600" height="1000" loading="lazy" decoding="async">
-<span class="case-title">نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="31,061">31,061</span><span class="figure-unit">م³</span></span><span class="figure-label">حفر عند المنسوب المتوازن للمنصة</span></p>
+<p class="tile-meta"><span class="coords">23.51° ش · 40.81° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/dune-monitoring/">
+<span class="tile-media"><picture><source srcset="/portfolio/dune-monitoring/dune_migration-960.webp" type="image/webp"><img src="/portfolio/dune-monitoring/dune_migration.png" alt="غلاف النموذج: حركة الكثبان الرملية شرق واحة الأحساء قرب طريق سلوى والهفوف: 2017 إلى 2026" width="1600" height="1550" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">حركة الكثبان الرملية شرق واحة الأحساء قرب طريق سلوى والهفوف: 2017 إلى 2026</span>
 </a>
-<p>صممنا 8 طبقات و15 نطاقًا (10 قوائم مرمزة) و4 علاقات، ونفذناها في GeoPackage بقواعد تمنع القيم الخارجة عن النطاق والمراجع المفقودة، ثم حمّلنا عينة من OpenStreetMap لحي في الرياض.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/hajj-umrah-facility-mapping/">
-<img src="/portfolio/hajj-umrah-facility-mapping/mina_facilities_map.png" alt="غلاف النموذج: خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap" width="1600" height="1100" loading="lazy" decoding="async">
-<span class="case-title">خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="7.4">7.4</span><span class="figure-unit">م/سنة</span></span><span class="figure-label">وسيط زحف الكثبان نحو الجنوب، و171 من 357 مربعًا متحركة</span></p>
+<p class="tile-meta"><span class="coords">25.25° ش · 49.83° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/flood-exposure-screening/">
+<span class="tile-media"><picture><source srcset="/portfolio/flood-exposure-screening/building_exposure-960.webp" type="image/webp"><img src="/portfolio/flood-exposure-screening/building_exposure.png" alt="غلاف النموذج: فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية" width="1600" height="1620" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية</span>
 </a>
-<p>رسمنا 566 مخيمًا و52 نقطة صحية وما حولها من خدمات في منى، وحسبنا المشي على الشبكة: 87% من المخيمات على بعد 10 دقائق أو أقل من نقطة صحية مرسومة. الخريطة تبين ما رُسم فقط، لا كل ما هو موجود.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/health-emergency-coverage/">
-<img src="/portfolio/health-emergency-coverage/drive_time_coverage_map.png" alt="غلاف النموذج: زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها" width="1600" height="1300" loading="lazy" decoding="async">
-<span class="case-title">زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="2,902">2,902</span></span><span class="figure-label">مبنى فُحص، منها 71 في الفئة العالية</span></p>
+<p class="tile-meta"><span class="coords">18.55° ش · 42.05° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/geodatabase-design/">
+<span class="tile-media"><picture><source srcset="/portfolio/geodatabase-design/schema_diagram-960.webp" type="image/webp"><img src="/portfolio/geodatabase-design/schema_diagram.png" alt="غلاف النموذج: نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة" width="1600" height="1000" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة</span>
 </a>
-<p>على شبكة الطرق في OpenStreetMap وتقديرات WorldPop للسكان، يقع 72.7% من السكان المقدرين داخل 10 دقائق بالسيارة من أقرب مستشفى مرسوم و95.3% داخل 20 دقيقة، بسرعات ثابتة بلا ازدحام.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/heritage-tourism-mapping/">
-<img src="/portfolio/heritage-tourism-mapping/heritage_visitor_map.png" alt="غلاف النموذج: خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية" width="1600" height="1700" loading="lazy" decoding="async">
-<span class="case-title">خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="7">7</span></span><span class="figure-label">من 7 تعديلات خاطئة متعمدة رفضتها القواعد</span></p>
+<p class="tile-meta"><span class="coords">24.74° ش · 46.58° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/hajj-umrah-facility-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/hajj-umrah-facility-mapping/mina_facilities_map-960.webp" type="image/webp"><img src="/portfolio/hajj-umrah-facility-mapping/mina_facilities_map.png" alt="غلاف النموذج: خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap" width="1600" height="1100" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap</span>
 </a>
-<p>جمعنا 71 موقعًا تراثيًا وسياحيًا من Wikidata و OpenStreetMap في قائمة واحدة مرقمة، 23 منها باسم عربي وإنجليزي معًا، مع خدمات الزوار ومسار قيادة بطول 59 كم بين خمسة مواقع رئيسية.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/lineament-mapping/">
-<img src="/portfolio/lineament-mapping/lineaments_map.png" alt="غلاف النموذج: استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM" width="1600" height="1600" loading="lazy" decoding="async">
-<span class="case-title">استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="566">566</span></span><span class="figure-label">مخيمًا، منها 290 داخل 5 دقائق من نقطة صحية</span></p>
+<p class="tile-meta"><span class="coords">21.41° ش · 39.89° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/health-emergency-coverage/">
+<span class="tile-media"><picture><source srcset="/portfolio/health-emergency-coverage/drive_time_coverage_map-960.webp" type="image/webp"><img src="/portfolio/health-emergency-coverage/drive_time_coverage_map.png" alt="غلاف النموذج: زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها" width="1600" height="1300" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها</span>
 </a>
-<p>استخلصنا 355 خطًا تضاريسيًا بطول 289 كم من تظليل نموذج NASADEM بأربع زوايا إضاءة على نافذة 30 × 30 كم في الدرع العربي. الاتجاه الغالب شمال شرق إلى جنوب غرب، بين 40° و50°.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/metro-walk-access-riyadh/">
-<img src="/portfolio/metro-walk-access-riyadh/walk_catchments_map.png" alt="غلاف النموذج: نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض" width="1600" height="1100" loading="lazy" decoding="async">
-<span class="case-title">نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="72.7">72.7</span><span class="figure-unit">%</span></span><span class="figure-label">من السكان المقدرين داخل 10 دقائق بالسيارة من مستشفى مرسوم</span></p>
+<p class="tile-meta"><span class="coords">26.34° ش · 43.94° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/heritage-tourism-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/heritage-tourism-mapping/heritage_visitor_map-960.webp" type="image/webp"><img src="/portfolio/heritage-tourism-mapping/heritage_visitor_map.png" alt="غلاف النموذج: خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية" width="1600" height="1700" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية</span>
 </a>
-<p>حسبنا على شبكة المشاة في OpenStreetMap المنطقة التي تُبلغ مشيًا خلال 5 و10 و15 دقيقة من ست محطات. معًا تغطي 15 دقيقة 8.37 كم² و261.3 كم من الطرق.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/ndvi-change-pivot-farms/">
-<img src="/portfolio/ndvi-change-pivot-farms/vegetation_change.png" alt="غلاف النموذج: تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026" width="1600" height="1600" loading="lazy" decoding="async">
-<span class="case-title">تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="71">71</span></span><span class="figure-label">موقعًا تراثيًا من مصدرين مفتوحين</span></p>
+<p class="tile-meta"><span class="coords">26.70° ش · 37.96° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/land-surface-temperature/">
+<span class="tile-media"><picture><source srcset="/portfolio/land-surface-temperature/lst_riyadh-960.webp" type="image/webp"><img src="/portfolio/land-surface-temperature/lst_riyadh.png" alt="غلاف النموذج: حرارة سطح الأرض في الرياض صيف 2026 حسب الغطاء الأرضي والأحياء" width="1600" height="1750" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">حرارة سطح الأرض في الرياض صيف 2026 حسب الغطاء الأرضي والأحياء</span>
 </a>
-<p>مشهدان من Sentinel-2 بينهما سبع سنوات يبيّنان أن مساحة النبات النشط (NDVI ≥ 0.3) في نافذة 15 × 15 كم نزلت من 11,901 هكتار إلى 9,541 هكتار. صار 2,565 هكتار نشطًا وخرج 4,925 هكتار من النشاط بين التاريخين.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/qa-audit-osm-buildings/">
-<img src="/portfolio/qa-audit-osm-buildings/issues_map.png" alt="غلاف النموذج: فحص جودة مباني OpenStreetMap في حي جرير بالرياض" width="1600" height="1200" loading="lazy" decoding="async">
-<span class="case-title">فحص جودة مباني OpenStreetMap في حي جرير بالرياض</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="52.4">52.4</span><span class="figure-unit">°م</span></span><span class="figure-label">وسيط حرارة السطح في 130 حيًا</span></p>
+<p class="tile-meta"><span class="coords">24.72° ش · 46.67° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/lineament-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/lineament-mapping/lineaments_map-960.webp" type="image/webp"><img src="/portfolio/lineament-mapping/lineaments_map.png" alt="غلاف النموذج: استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM" width="1600" height="1600" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM</span>
 </a>
-<p>فحصنا 2,285 مبنى من OpenStreetMap في حي جرير (2.58 كم²) بأداة Madar Quality Checker. وجد الفحص 8 تداخلات و17 مبنى بلا اسم شارع، ولا هندسة غير سليمة أو مكررة.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/site-suitability-mca/">
-<img src="/portfolio/site-suitability-mca/suitability_map.png" alt="غلاف النموذج: ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة" width="1600" height="1400" loading="lazy" decoding="async">
-<span class="case-title">ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="355">355</span></span><span class="figure-label">خطًا بطول 289 كم</span></p>
+<p class="tile-meta"><span class="coords">23.50° ش · 40.85° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/metro-walk-access-riyadh/">
+<span class="tile-media"><picture><source srcset="/portfolio/metro-walk-access-riyadh/walk_catchments_map-960.webp" type="image/webp"><img src="/portfolio/metro-walk-access-riyadh/walk_catchments_map.png" alt="غلاف النموذج: نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض" width="1600" height="1100" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض</span>
 </a>
-<p>دمجنا الميل من NASADEM والبعد عن خطوط الكهرباء والطرق من OpenStreetMap بعد استبعاد العمران والمزارع والأودية. بقي 19.5 كم² بملاءمة عالية جدًا، ومنها 7 موقعًا متصلًا مساحته 20 هكتارًا فأكثر.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/study-area-map/">
-<img src="/portfolio/study-area-map/study_area_map.png" alt="غلاف النموذج: خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين" width="1600" height="1200" loading="lazy" decoding="async">
-<span class="case-title">خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="8.37">8.37</span><span class="figure-unit">كم²</span></span><span class="figure-label">يُوصل إليها مشيًا في 15 دقيقة من ست محطات</span></p>
+<p class="tile-meta"><span class="coords">24.71° ش · 46.68° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/ndvi-change-pivot-farms/">
+<span class="tile-media"><picture><source srcset="/portfolio/ndvi-change-pivot-farms/vegetation_change-960.webp" type="image/webp"><img src="/portfolio/ndvi-change-pivot-farms/vegetation_change.png" alt="غلاف النموذج: تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026" width="1600" height="1600" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026</span>
 </a>
-<p>خريطة منطقة دراسة جاهزة للطباعة فيها الخريطة الرئيسية وخريطة موقع ومقياس رسم وسهم شمال وشبكة إحداثيات ومفتاح ومصادر. مبنية من OpenStreetMap و Natural Earth بكود يعيد إنتاجها.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/terrain-buildings-3d-model/">
-<img src="/portfolio/terrain-buildings-3d-model/oblique_view.png" alt="غلاف النموذج: نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها" width="1600" height="1000" loading="lazy" decoding="async">
-<span class="case-title">نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="2,360">2,360</span><span class="figure-unit">هكتار</span></span><span class="figure-label">صافي نقص النبات النشط بين 2019 و2026</span></p>
+<p class="tile-meta"><span class="coords">30.08° ش · 38.35° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/qa-audit-osm-buildings/">
+<span class="tile-media"><picture><source srcset="/portfolio/qa-audit-osm-buildings/issues_map-960.webp" type="image/webp"><img src="/portfolio/qa-audit-osm-buildings/issues_map.png" alt="غلاف النموذج: فحص جودة مباني OpenStreetMap في حي جرير بالرياض" width="1600" height="1200" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">فحص جودة مباني OpenStreetMap في حي جرير بالرياض</span>
 </a>
-<p>بنينا نموذجًا ثلاثي الأبعاد لنافذة 2 × 2 كم في وسط أبها من NASADEM التابع لـ NASA ومباني OpenStreetMap، وصدّرناه ملف GLB واحدًا بحجم 1.7 ميغابايت. فيه 80,000 مثلث للتضاريس و284 مبنى مرفوعًا من الأرض.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/wadi-terrain-preprocessing/">
-<img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="غلاف النموذج: تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض" width="1600" height="1437" loading="lazy" decoding="async">
-<span class="case-title">تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="2,285">2,285</span></span><span class="figure-label">مبنى فُحص، و25 ملاحظة</span></p>
+<p class="tile-meta"><span class="coords">24.68° ش · 46.75° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/site-suitability-mca/">
+<span class="tile-media"><picture><source srcset="/portfolio/site-suitability-mca/suitability_map-960.webp" type="image/webp"><img src="/portfolio/site-suitability-mca/suitability_map.png" alt="غلاف النموذج: ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة" width="1600" height="1400" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة</span>
 </a>
-<p>من نموذج NASADEM بدقة 30 م اشتققنا اتجاه الجريان وتراكمه وشبكة المسيلات وحدود الحوض فوق مخرج قرب العيينة. مساحة الحوض 414 كم² وأطول مسار جريان 63.6 كم.</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
-</li><li class="case">
-<a class="case-link" href="/portfolio/watershed-morphometry/">
-<img src="/portfolio/watershed-morphometry/stream_orders.png" alt="غلاف النموذج: الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM" width="1600" height="2049" loading="lazy" decoding="async">
-<span class="case-title">الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM</span>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="19.5">19.5</span><span class="figure-unit">كم²</span></span><span class="figure-label">بملاءمة عالية جدًا لمحطة شمسية صغيرة</span></p>
+<p class="tile-meta"><span class="coords">24.60° ش · 46.87° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/study-area-map/">
+<span class="tile-media"><picture><source srcset="/portfolio/study-area-map/study_area_map-960.webp" type="image/webp"><img src="/portfolio/study-area-map/study_area_map.png" alt="غلاف النموذج: خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين" width="1600" height="1200" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين</span>
 </a>
-<p>حددنا حوض وادي نعمان فوق مخرج عند خروجه من الجبال، ورتبنا مسيلاته بطريقة Strahler وحسبنا معاملاته الشكلية. المساحة 661 كم²، والرتبة القصوى 5، وكثافة التصريف 0.82 كم/كم².</p>
-<p class="case-demo">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</p>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="730">730</span><span class="figure-unit">كم²</span></span><span class="figure-label">من اليابسة مبنية من خط الساحل في OpenStreetMap</span></p>
+<p class="tile-meta"><span class="coords">26.03° ش · 50.55° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/surface-water-mapping/">
+<span class="tile-media"><picture><source srcset="/portfolio/surface-water-mapping/water_area_chart-960.webp" type="image/webp"><img src="/portfolio/surface-water-mapping/water_area_chart.png" alt="غلاف النموذج: مساحة بحيرة سد الملك فهد في بيشة شهريًا من Sentinel-2: يناير 2017 إلى نوفمبر 2026" width="1600" height="800" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">مساحة بحيرة سد الملك فهد في بيشة شهريًا من Sentinel-2: يناير 2017 إلى نوفمبر 2026</span>
+</a>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="669">669</span><span class="figure-unit">هكتار</span></span><span class="figure-label">وسيط مساحة ماء البحيرة في 107 تواريخ صالحة</span></p>
+<p class="tile-meta"><span class="coords">19.65° ش · 42.47° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/terrain-buildings-3d-model/">
+<span class="tile-media"><picture><source srcset="/portfolio/terrain-buildings-3d-model/oblique_view-960.webp" type="image/webp"><img src="/portfolio/terrain-buildings-3d-model/oblique_view.png" alt="غلاف النموذج: نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها" width="1600" height="1000" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها</span>
+</a>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="84,884">84,884</span></span><span class="figure-label">مثلثًا في نموذج GLB حجمه 1.71 ميغابايت</span></p>
+<p class="tile-meta"><span class="coords">18.22° ش · 42.51° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/wadi-terrain-preprocessing/">
+<span class="tile-media"><picture><source srcset="/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp" type="image/webp"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="غلاف النموذج: تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض" width="1600" height="1437" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض</span>
+</a>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="414">414</span><span class="figure-unit">كم²</span></span><span class="figure-label">مساحة الحوض المجهز</span></p>
+<p class="tile-meta"><span class="coords">24.87° ش · 46.20° ق</span><span>نموذج توضيحي</span></p>
+</li><li class="tile" data-reveal>
+<a class="tile-link" href="/portfolio/watershed-morphometry/">
+<span class="tile-media"><picture><source srcset="/portfolio/watershed-morphometry/stream_orders-960.webp" type="image/webp"><img src="/portfolio/watershed-morphometry/stream_orders.png" alt="غلاف النموذج: الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM" width="1600" height="2049" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM</span>
+</a>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="661">661</span><span class="figure-unit">كم²</span></span><span class="figure-label">مساحة الحوض المقيس، والرتبة القصوى 5</span></p>
+<p class="tile-meta"><span class="coords">21.32° ش · 40.15° ق</span><span>نموذج توضيحي</span></p>
 </li></ul>
 </div>
 </section>
-<section class="cta field-turquoise">
-<a class="cta-link" href="/request/">
-<p class="cta-text">نموذج طلب بحقول ثابتة. لا ترسل بيانات الآن.</p>
-<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
-<h2 class="cta-word">اطلب</h2>
-</a>
+<section class="cta" aria-labelledby="cta-ar">
+<div class="cta-side cta-side-image"><picture><source srcset="/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp" type="image/webp"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="غلاف النموذج: تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض" width="1600" height="1437" loading="lazy" decoding="async"></picture></div>
+<div class="cta-tile field-turquoise" data-reveal>
+<h2 id="cta-ar">اطلب خدمة</h2>
+<p>نموذج طلب بحقول ثابتة. لا ترسل بيانات الآن.</p>
+<p><a class="button" href="/request/">افتح نموذج الطلب</a></p>
+</div>
+<div class="cta-side cta-side-mark field-navy"><svg class="cta-ring" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="32" rx="28" ry="9.5" transform="rotate(-22 32 32)"/><circle cx="32" cy="32" r="6"/></svg></div>
 </section>
 </main>
-<footer class="site-footer field-navy">
-<div class="wrap">
-<div class="footer-grid">
-<div class="footer-contact"><h2>التواصل</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
-<nav aria-label="الصفحات"><h2>الصفحات</h2><ul><li><a href="/services/">الخدمات</a></li><li><a href="/tools/">الأدوات</a></li><li><a href="/portfolio/">معرض الأعمال</a></li><li><a href="/about/">عن مدار</a></li><li><a href="/request/">اطلب خدمة</a></li></ul></nav>
+<footer class="site-footer field-deep">
+<div class="wrap footer-close">
+<p class="footer-mark"><svg class="footer-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span class="footer-word">مدار</span></p>
+<p class="footer-slogan">بيانات مكانية تثق فيها</p>
+</div>
+<div class="wrap footer-grid">
+<div class="footer-contact"><h2>التواصل</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com" dir="ltr">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="الصفحات"><h2>الصفحات</h2><ul><li><a href="/services/">الخدمات</a></li><li><a href="/tools/">الأدوات</a></li><li><a href="/portfolio/">معرض الأعمال</a></li><li><a href="/about/">عن مدار</a></li><li><a href="/request/">اطلب خدمة</a></li><li><a class="footer-lang" href="/en/portfolio/" lang="en" hreflang="en" data-lang="en">English</a></li></ul></nav>
 <nav class="footer-services" aria-label="فئات الخدمات"><h2>فئات الخدمات</h2><ul><li><a href="/services/category/data-quality/">البيانات المكانية وجودتها</a></li><li><a href="/services/category/surveying-geodesy/">المساحة والجيوديسيا</a></li><li><a href="/services/category/photogrammetry-3d/">التصوير المساحي والليدار والنماذج ثلاثية الأبعاد</a></li><li><a href="/services/category/remote-sensing/">الاستشعار عن بعد</a></li><li><a href="/services/category/geology-mining/">الجيولوجيا والتعدين</a></li><li><a href="/services/category/hydrology-water/">الهيدرولوجيا والمياه</a></li><li><a href="/services/category/environment-agriculture/">البيئة والزراعة</a></li><li><a href="/services/category/urban-realestate/">التخطيط العمراني والعقار</a></li><li><a href="/services/category/transport-logistics/">النقل واللوجستيات</a></li><li><a href="/services/category/utilities-energy-telecom/">المرافق والطاقة والاتصالات</a></li><li><a href="/services/category/business-location/">ذكاء الموقع للأعمال</a></li><li><a href="/services/category/web-apps-automation/">التطبيقات والأتمتة ولوحات المعلومات</a></li><li><a href="/services/category/cartography-reporting/">الخرائط والتقارير</a></li><li><a href="/services/category/training-advisory/">التدريب والاستشارات</a></li></ul></nav>
 </div>
-<div class="footer-legal">
-<p>© 2026 مدار للحلول الجيومكانية. البيانات المفتوحة في النماذج: OpenStreetMap برخصة ODbL، و Copernicus، و Landsat.</p>
+<div class="wrap footer-legal">
+<p>© 2026 مدار للحلول الجيومكانية. البيانات المفتوحة في النماذج: OpenStreetMap برخصة ODbL، و Copernicus، و Landsat. الخرائط: OpenFreeMap و OpenMapTiles وبيانات OpenStreetMap، والتضاريس من Terrain Tiles، والسواحل من Natural Earth، وخطوط الكنتور من NASADEM.</p>
 <a href="#top">إلى أعلى الصفحة</a>
 </div>
-</div>
-<p class="footer-name" aria-hidden="true">مدار</p>
 </footer>
-
+<script type="module" src="/assets/madar.js"></script>
+<script type="application/json" id="madar-map">{"scriptUrl":"https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.js","scriptIntegrity":"sha256-qcniqjbU1bY7Ex8nwScvGiiIPu7MDt3R4Nv65AM7x8k=","styleUrl":"https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.css","styleIntegrity":"sha256-qx5w1Z7EBGW65+cDDaLzzPKBM/1QLmK9WY7vut/XpzI=","vector":"https://tiles.openfreemap.org/planet","terrain":"https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png","attribution":"OpenFreeMap © OpenMapTiles, data © OpenStreetMap contributors","attributionUrl":"https://www.openstreetmap.org/copyright","terrainAttribution":"Relief: Terrain Tiles (Mapzen, AWS Open Data) from SRTM and GMTED2010 (USGS) and ETOPO1 (NOAA)","land":"/assets/world.json","landAttribution":"Natural Earth","center":[45,24]}</script>
+<script type="application/json" id="madar-cases">[{"slug":"alteration-mapping","url":"/portfolio/alteration-mapping/","title":"فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9","location":[40.8603,23.4778],"coords":"23.48° ش · 40.86° ق","image":"/portfolio/alteration-mapping/alteration_candidates-960.webp","alt":"غلاف النموذج: فرز مكتبي لمؤشرات التحول الحراري حول مهد الذهب من Landsat 9","value":"7.0","unit":"أضعاف","label":"تركز تداخل الأكاسيد والطين قرب سجلّي مهد الذهب"},{"slug":"automation-batch-toolkit","url":"/portfolio/automation-batch-toolkit/","title":"معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار","location":[46.736,24.6705],"coords":"24.67° ش · 46.74° ق","image":"/portfolio/automation-batch-toolkit/folders_before_after-960.webp","alt":"غلاف النموذج: معالجة مجلد من 26 طبقة بخمسة أوامر من حزمة أتمتة مدار","value":"15.7","unit":"ث","label":"لتشغيل خمسة أوامر على 26 طبقة"},{"slug":"branch-site-selection","url":"/portfolio/branch-site-selection/","title":"ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض","location":[46.5977,24.8008],"coords":"24.80° ش · 46.60° ق","image":"/portfolio/branch-site-selection/candidate_score_map-960.webp","alt":"غلاف النموذج: ترتيب مواقع مرشحة لمقهى جديد في حي الملقا بالرياض","value":"0.71","unit":"","label":"درجة أفضل موقع للمقهى من 1"},{"slug":"building-change-detection","url":"/portfolio/building-change-detection/","title":"رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026","location":[46.6445,24.8947],"coords":"24.89° ش · 46.64° ق","image":"/portfolio/building-change-detection/new_built_up-960.webp","alt":"غلاف النموذج: رصد التوسع العمراني في حي النرجس بالرياض: أكتوبر 2017 إلى أكتوبر 2026","value":"1,128","unit":"هكتار","label":"نسيج عمراني جديد بين 2017 و2026"},{"slug":"cad-to-gis-riyadh-block","url":"/portfolio/cad-to-gis-riyadh-block/","title":"تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض","location":[46.6745,24.7115],"coords":"24.71° ش · 46.67° ق","image":"/portfolio/cad-to-gis-riyadh-block/datum_offset_map-960.webp","alt":"غلاف النموذج: تحويل رسم CAD إلى GIS ونقله من عين العبد إلى KSA-GRF17، حي في الرياض","value":"75.67","unit":"م","label":"إزاحة بين التحويل الصحيح وتغيير اسم النظام"},{"slug":"coastal-mangrove-mapping","url":"/portfolio/coastal-mangrove-mapping/","title":"تغير المانغروف في شمال خليج تاروت بين صفوى ورأس تنورة: ديسمبر 2017 إلى يناير 2026","location":[50.0107,26.6979],"coords":"26.70° ش · 50.01° ق","image":"/portfolio/coastal-mangrove-mapping/mangrove_change-960.webp","alt":"غلاف النموذج: تغير المانغروف في شمال خليج تاروت بين صفوى ورأس تنورة: ديسمبر 2017 إلى يناير 2026","value":"102","unit":"هكتار","label":"صافي زيادة المانغروف بين 2017 و2026"},{"slug":"dem-contours","url":"/portfolio/dem-contours/","title":"كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM","location":[40.8074,23.5113],"coords":"23.51° ش · 40.81° ق","image":"/portfolio/dem-contours/contours_platform-960.webp","alt":"غلاف النموذج: كنتور ومقطع وحجم حفر وردم لمنصة افتراضية على سفح قرب مهد الذهب من نموذج NASADEM","value":"31,061","unit":"م³","label":"حفر عند المنسوب المتوازن للمنصة"},{"slug":"dune-monitoring","url":"/portfolio/dune-monitoring/","title":"حركة الكثبان الرملية شرق واحة الأحساء قرب طريق سلوى والهفوف: 2017 إلى 2026","location":[49.8317,25.2456],"coords":"25.25° ش · 49.83° ق","image":"/portfolio/dune-monitoring/dune_migration-960.webp","alt":"غلاف النموذج: حركة الكثبان الرملية شرق واحة الأحساء قرب طريق سلوى والهفوف: 2017 إلى 2026","value":"7.4","unit":"م/سنة","label":"وسيط زحف الكثبان نحو الجنوب، و171 من 357 مربعًا متحركة"},{"slug":"flood-exposure-screening","url":"/portfolio/flood-exposure-screening/","title":"فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية","location":[42.0496,18.5527],"coords":"18.55° ش · 42.05° ق","image":"/portfolio/flood-exposure-screening/building_exposure-960.webp","alt":"غلاف النموذج: فرز مكتبي لتعرض مباني محايل عسير لمجاري الأودية","value":"2,902","unit":"","label":"مبنى فُحص، منها 71 في الفئة العالية"},{"slug":"geodatabase-design","url":"/portfolio/geodatabase-design/","title":"نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة","location":[46.58,24.74],"coords":"24.74° ش · 46.58° ق","image":"/portfolio/geodatabase-design/schema_diagram-960.webp","alt":"غلاف النموذج: نموذج بيانات بلدي للقطع والمرافق في GeoPackage مع قاموس بيانات وقواعد سلامة","value":"7","unit":"","label":"من 7 تعديلات خاطئة متعمدة رفضتها القواعد"},{"slug":"hajj-umrah-facility-mapping","url":"/portfolio/hajj-umrah-facility-mapping/","title":"خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap","location":[39.8865,21.4115],"coords":"21.41° ش · 39.89° ق","image":"/portfolio/hajj-umrah-facility-mapping/mina_facilities_map-960.webp","alt":"غلاف النموذج: خريطة المخيمات والمرافق والمسارات في منى كما هي في OpenStreetMap","value":"566","unit":"","label":"مخيمًا، منها 290 داخل 5 دقائق من نقطة صحية"},{"slug":"health-emergency-coverage","url":"/portfolio/health-emergency-coverage/","title":"زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها","location":[43.9375,26.34],"coords":"26.34° ش · 43.94° ق","image":"/portfolio/health-emergency-coverage/drive_time_coverage_map-960.webp","alt":"غلاف النموذج: زمن الوصول بالسيارة إلى المستشفيات في بريدة: من داخل 10 و20 دقيقة ومن خارجها","value":"72.7","unit":"%","label":"من السكان المقدرين داخل 10 دقائق بالسيارة من مستشفى مرسوم"},{"slug":"heritage-tourism-mapping","url":"/portfolio/heritage-tourism-mapping/","title":"خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية","location":[37.9568,26.701],"coords":"26.70° ش · 37.96° ق","image":"/portfolio/heritage-tourism-mapping/heritage_visitor_map-960.webp","alt":"غلاف النموذج: خريطة التراث والزيارة في العلا وقائمة مواقع بالعربية والإنجليزية","value":"71","unit":"","label":"موقعًا تراثيًا من مصدرين مفتوحين"},{"slug":"land-surface-temperature","url":"/portfolio/land-surface-temperature/","title":"حرارة سطح الأرض في الرياض صيف 2026 حسب الغطاء الأرضي والأحياء","location":[46.6739,24.7226],"coords":"24.72° ش · 46.67° ق","image":"/portfolio/land-surface-temperature/lst_riyadh-960.webp","alt":"غلاف النموذج: حرارة سطح الأرض في الرياض صيف 2026 حسب الغطاء الأرضي والأحياء","value":"52.4","unit":"°م","label":"وسيط حرارة السطح في 130 حيًا"},{"slug":"lineament-mapping","url":"/portfolio/lineament-mapping/","title":"استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM","location":[40.8487,23.502],"coords":"23.50° ش · 40.85° ق","image":"/portfolio/lineament-mapping/lineaments_map-960.webp","alt":"غلاف النموذج: استخلاص الخطوط التضاريسية حول مهد الذهب من أربعة تظليلات لنموذج NASADEM","value":"355","unit":"","label":"خطًا بطول 289 كم"},{"slug":"metro-walk-access-riyadh","url":"/portfolio/metro-walk-access-riyadh/","title":"نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض","location":[46.6775,24.7085],"coords":"24.71° ش · 46.68° ق","image":"/portfolio/metro-walk-access-riyadh/walk_catchments_map-960.webp","alt":"غلاف النموذج: نطاقات الوصول مشيًا إلى ست محطات من المسار الأزرق لمترو الرياض","value":"8.37","unit":"كم²","label":"يُوصل إليها مشيًا في 15 دقيقة من ست محطات"},{"slug":"ndvi-change-pivot-farms","url":"/portfolio/ndvi-change-pivot-farms/","title":"تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026","location":[38.3515,30.077],"coords":"30.08° ش · 38.35° ق","image":"/portfolio/ndvi-change-pivot-farms/vegetation_change-960.webp","alt":"غلاف النموذج: تغير الغطاء النباتي في مزارع الري المحوري بطبرجل، الجوف: مارس 2019 إلى مارس 2026","value":"2,360","unit":"هكتار","label":"صافي نقص النبات النشط بين 2019 و2026"},{"slug":"qa-audit-osm-buildings","url":"/portfolio/qa-audit-osm-buildings/","title":"فحص جودة مباني OpenStreetMap في حي جرير بالرياض","location":[46.7505,24.6775],"coords":"24.68° ش · 46.75° ق","image":"/portfolio/qa-audit-osm-buildings/issues_map-960.webp","alt":"غلاف النموذج: فحص جودة مباني OpenStreetMap في حي جرير بالرياض","value":"2,285","unit":"","label":"مبنى فُحص، و25 ملاحظة"},{"slug":"site-suitability-mca","url":"/portfolio/site-suitability-mca/","title":"ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة","location":[46.8705,24.5975],"coords":"24.60° ش · 46.87° ق","image":"/portfolio/site-suitability-mca/suitability_map-960.webp","alt":"غلاف النموذج: ملاءمة الأرض لمحطة طاقة شمسية صغيرة شرق الرياض بثلاثة معايير وأوزان معلنة","value":"19.5","unit":"كم²","label":"بملاءمة عالية جدًا لمحطة شمسية صغيرة"},{"slug":"study-area-map","url":"/portfolio/study-area-map/","title":"خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين","location":[50.55,26.03],"coords":"26.03° ش · 50.55° ق","image":"/portfolio/study-area-map/study_area_map-960.webp","alt":"غلاف النموذج: خريطة منطقة الدراسة لرسالة أو تقرير: مملكة البحرين","value":"730","unit":"كم²","label":"من اليابسة مبنية من خط الساحل في OpenStreetMap"},{"slug":"surface-water-mapping","url":"/portfolio/surface-water-mapping/","title":"مساحة بحيرة سد الملك فهد في بيشة شهريًا من Sentinel-2: يناير 2017 إلى نوفمبر 2026","location":[42.4677,19.6459],"coords":"19.65° ش · 42.47° ق","image":"/portfolio/surface-water-mapping/water_area_chart-960.webp","alt":"غلاف النموذج: مساحة بحيرة سد الملك فهد في بيشة شهريًا من Sentinel-2: يناير 2017 إلى نوفمبر 2026","value":"669","unit":"هكتار","label":"وسيط مساحة ماء البحيرة في 107 تواريخ صالحة"},{"slug":"terrain-buildings-3d-model","url":"/portfolio/terrain-buildings-3d-model/","title":"نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها","location":[42.505,18.2165],"coords":"18.22° ش · 42.51° ق","image":"/portfolio/terrain-buildings-3d-model/oblique_view-960.webp","alt":"غلاف النموذج: نموذج كتلي ثلاثي الأبعاد للتضاريس والمباني، وسط أبها","value":"84,884","unit":"","label":"مثلثًا في نموذج GLB حجمه 1.71 ميغابايت"},{"slug":"wadi-terrain-preprocessing","url":"/portfolio/wadi-terrain-preprocessing/","title":"تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض","location":[46.1953,24.8697],"coords":"24.87° ش · 46.20° ق","image":"/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp","alt":"غلاف النموذج: تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض","value":"414","unit":"كم²","label":"مساحة الحوض المجهز"},{"slug":"watershed-morphometry","url":"/portfolio/watershed-morphometry/","title":"الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM","location":[40.1509,21.3151],"coords":"21.32° ش · 40.15° ق","image":"/portfolio/watershed-morphometry/stream_orders-960.webp","alt":"غلاف النموذج: الخصائص المورفومترية لحوض وادي نعمان شرق مكة المكرمة من نموذج NASADEM","value":"661","unit":"كم²","label":"مساحة الحوض المقيس، والرتبة القصوى 5"}]</script>
+<script type="module" src="/assets/maps.js"></script>
 </body>
 </html>

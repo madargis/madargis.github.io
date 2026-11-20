@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js");document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(!window.madarReady)document.documentElement.classList.remove("js")},0)});</script>
 <title>Input Preparation for Hydraulic and Groundwater Models | Madar</title>
 <meta name="description" content="Terrain, roughness layers and mesh for a HEC-RAS 2D model, and grids and layers for a MODFLOW model, prepared for an engineer who builds and runs the model.">
 <link rel="canonical" href="https://madargis.github.io/en/services/model-input-prep/">
 <link rel="alternate" hreflang="ar" href="https://madargis.github.io/services/model-input-prep/">
 <link rel="alternate" hreflang="en" href="https://madargis.github.io/en/services/model-input-prep/">
-<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/services/model-input-prep/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/en/services/model-input-prep/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Madar Geospatial">
 <meta property="og:title" content="Input Preparation for Hydraulic and Groundwater Models | Madar">
@@ -25,7 +26,7 @@
 <link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"Madar Geospatial","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/en/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"Spatial data you can trust","description":"A small digital office that delivers geospatial services remotely and builds tools that shorten everyday GIS work.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
@@ -34,59 +35,64 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header field-navy" id="top">
-<div class="wrap bar">
+<div class="bar">
 <a class="wordmark" href="/en/" aria-label="Madar: Home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>Madar</span></a>
 <nav class="nav" aria-label="Main navigation"><ul><li><a href="/en/services/" aria-current="true">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li></ul></nav>
 <div class="bar-actions">
-<a class="lang-switch" href="/services/model-input-prep/" lang="ar" hreflang="ar">العربية</a>
-<a class="button" href="/en/request/">Request a service</a>
+<a class="lang-switch" href="/services/model-input-prep/" lang="ar" hreflang="ar" data-lang="ar">العربية</a>
+<a class="button button-small" href="/en/request/"><span class="label-long">Request a service</span><span class="label-short">Request</span></a>
 </div>
 </div>
 </header>
 <main id="main">
 <section class="masthead field-navy">
-<div class="wrap">
+<span class="masthead-art" aria-hidden="true"></span>
+<div class="wrap masthead-inner">
 <nav class="crumbs" aria-label="Breadcrumb"><ol role="list"><li><a href="/en/services/">Services</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li></ol></nav>
-<h1>Input Preparation for Hydraulic and Groundwater Models</h1>
-<div class="masthead-body"><p class="lead">Terrain, roughness layers and mesh for a HEC-RAS 2D model, and grids and layers for a MODFLOW model, prepared for an engineer who builds and runs the model.</p><div class="masthead-foot">
-<p class="fact"><strong class="fact-price">Quoted per scope</strong><span class="badge badge-preparing">In preparation</span></p>
+<h1 class="rise">Input Preparation for Hydraulic and Groundwater Models</h1>
+<div class="masthead-body rise"><p class="lead">Terrain, roughness layers and mesh for a HEC-RAS 2D model, and grids and layers for a MODFLOW model, prepared for an engineer who builds and runs the model.</p><div class="masthead-foot">
+<p class="price">Quoted per scope</p><p><span class="badge badge-preparing">In preparation</span></p>
 
 <p class="regulated">This service is in preparation and cannot be requested yet.</p>
 </div></div>
 </div>
 </section>
-<section class="chapter field-sand"><div class="wrap split"><div><h2>The problem</h2><p class="statement">Half of modelling time is spatial preparation, and the engineer wants clean, documented inputs.</p></div><div><h2>Who it is for</h2><p>Hydraulic and groundwater engineers and their offices.</p></div></div></section>
-<section class="chapter field-paper"><div class="wrap split"><div><h2>What you receive</h2><ul class="points" role="list"><li>A terrain surface merged with the survey.</li><li>A roughness layer from land cover.</li><li>A first computational mesh and boundary lines.</li><li>A method note.</li></ul></div><div><h2>What you supply</h2><ul class="points" role="list"><li>The model boundary and survey.</li><li>The engineer&#39;s parameter table.</li><li>The responsible engineer&#39;s name.</li></ul></div></div></section>
+<section class="chapter field-sand"><div class="wrap split"><div data-reveal><h2>The problem</h2><p class="statement">Half of modelling time is spatial preparation, and the engineer wants clean, documented inputs.</p></div><div data-reveal><h2>Who it is for</h2><p>Hydraulic and groundwater engineers and their offices.</p></div></div></section>
+<section class="chapter field-paper"><div class="wrap split"><div data-reveal><h2>What you receive</h2><ul class="points" role="list"><li>A terrain surface merged with the survey.</li><li>A roughness layer from land cover.</li><li>A first computational mesh and boundary lines.</li><li>A method note.</li></ul></div><div data-reveal><h2>What you supply</h2><ul class="points" role="list"><li>The model boundary and survey.</li><li>The engineer&#39;s parameter table.</li><li>The responsible engineer&#39;s name.</li></ul></div></div></section>
 <section class="chapter field-teal" aria-labelledby="service-steps">
 <div class="wrap">
-<h2 id="service-steps">How the work goes</h2>
+<h2 id="service-steps" data-reveal>How the work goes</h2>
 <ol class="steps" role="list"><li>The office fills in the request form.</li><li>We agree sources and parameters with the engineer.</li><li>We prepare and check the inputs.</li><li>We deliver the files and the note.</li></ol>
 </div>
 </section>
-<section class="chapter field-sand-deep"><div class="wrap split"><div><h2>Accuracy and limits statement</h2><blockquote class="limits">In preparation: Madar has no documented practice yet in HEC-RAS or MODFLOW. When available: limited to spatial inputs, with no running, calibration or interpretation of results.</blockquote></div><div><h2>Out of scope</h2><ul class="points" role="list"><li>Running and calibrating the model</li><li>Interpreting results</li><li>Signing</li></ul><h2>Tools</h2><ul class="points" role="list"><li>HEC-RAS RAS Mapper</li><li>QGIS</li><li>FloPy (planned)</li></ul></div></div></section>
+<section class="chapter field-sand-deep"><div class="wrap split"><div data-reveal><h2>Accuracy and limits statement</h2><blockquote class="limits">In preparation: Madar has no documented practice yet in HEC-RAS or MODFLOW. When available: limited to spatial inputs, with no running, calibration or interpretation of results.</blockquote></div><div data-reveal><h2>Out of scope</h2><ul class="points" role="list"><li>Running and calibrating the model</li><li>Interpreting results</li><li>Signing</li></ul><h2>Tools</h2><ul class="points" role="list"><li>HEC-RAS RAS Mapper</li><li>QGIS</li><li>FloPy (planned)</li></ul></div></div></section>
 
-<section class="cta field-turquoise">
-<a class="cta-link" href="/en/request/">
-<p class="cta-text">A request form with fixed fields. Do not send data yet.</p>
-<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
-<h2 class="cta-word">Request</h2>
-</a>
+<section class="cta" aria-labelledby="cta-en">
+<div class="cta-side cta-side-image"><picture><source srcset="/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp" type="image/webp"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="Demo cover: Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh" width="1600" height="1437" loading="lazy" decoding="async"></picture></div>
+<div class="cta-tile field-turquoise" data-reveal>
+<h2 id="cta-en">Request a service</h2>
+<p>A request form with fixed fields. Do not send data yet.</p>
+<p><a class="button" href="/en/request/">Open the request form</a></p>
+</div>
+<div class="cta-side cta-side-mark field-navy"><svg class="cta-ring" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="32" rx="28" ry="9.5" transform="rotate(-22 32 32)"/><circle cx="32" cy="32" r="6"/></svg></div>
 </section>
 </main>
-<footer class="site-footer field-navy">
-<div class="wrap">
-<div class="footer-grid">
-<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
-<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li></ul></nav>
+<footer class="site-footer field-deep">
+<div class="wrap footer-close">
+<p class="footer-mark"><svg class="footer-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span class="footer-word">Madar</span></p>
+<p class="footer-slogan">Spatial data you can trust</p>
+</div>
+<div class="wrap footer-grid">
+<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com" dir="ltr">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li><li><a class="footer-lang" href="/services/model-input-prep/" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li></ul></nav>
 <nav class="footer-services" aria-label="Service categories"><h2>Service categories</h2><ul><li><a href="/en/services/category/data-quality/">Spatial Data and Quality</a></li><li><a href="/en/services/category/surveying-geodesy/">Surveying and Geodesy</a></li><li><a href="/en/services/category/photogrammetry-3d/">Photogrammetry, LiDAR and 3D</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li><li><a href="/en/services/category/geology-mining/">Geology and Mining</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li><li><a href="/en/services/category/environment-agriculture/">Environment and Agriculture</a></li><li><a href="/en/services/category/urban-realestate/">Urban Planning and Real Estate</a></li><li><a href="/en/services/category/transport-logistics/">Transport and Logistics</a></li><li><a href="/en/services/category/utilities-energy-telecom/">Utilities, Energy and Telecom</a></li><li><a href="/en/services/category/business-location/">Location Intelligence for Business</a></li><li><a href="/en/services/category/web-apps-automation/">Web GIS, Apps and Automation</a></li><li><a href="/en/services/category/cartography-reporting/">Cartography and Reporting</a></li><li><a href="/en/services/category/training-advisory/">Training and Advisory</a></li></ul></nav>
 </div>
-<div class="footer-legal">
-<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat.</p>
+<div class="wrap footer-legal">
+<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat. Maps: OpenFreeMap, OpenMapTiles and OpenStreetMap data; relief from Terrain Tiles; coastlines from Natural Earth; contour lines from NASADEM.</p>
 <a href="#top">Back to top</a>
 </div>
-</div>
-<p class="footer-name" aria-hidden="true">Madar</p>
 </footer>
+<script type="module" src="/assets/madar.js"></script>
 
 </body>
 </html>

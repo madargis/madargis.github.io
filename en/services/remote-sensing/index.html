@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js");document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(!window.madarReady)document.documentElement.classList.remove("js")},0)});</script>
 <title>Remote Sensing Analysis | Madar</title>
 <meta name="description" content="Analysis of open Sentinel-2 and Landsat imagery for water, agriculture and change detection, answering one defined question: what changed on the ground, and when.">
 <link rel="canonical" href="https://madargis.github.io/en/services/remote-sensing/">
 <link rel="alternate" hreflang="ar" href="https://madargis.github.io/services/remote-sensing/">
 <link rel="alternate" hreflang="en" href="https://madargis.github.io/en/services/remote-sensing/">
-<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/services/remote-sensing/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/en/services/remote-sensing/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Madar Geospatial">
 <meta property="og:title" content="Remote Sensing Analysis | Madar">
@@ -25,7 +26,7 @@
 <link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"Madar Geospatial","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/en/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"Spatial data you can trust","description":"A small digital office that delivers geospatial services remotely and builds tools that shorten everyday GIS work.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
@@ -35,71 +36,76 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header field-navy" id="top">
-<div class="wrap bar">
+<div class="bar">
 <a class="wordmark" href="/en/" aria-label="Madar: Home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>Madar</span></a>
 <nav class="nav" aria-label="Main navigation"><ul><li><a href="/en/services/" aria-current="true">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li></ul></nav>
 <div class="bar-actions">
-<a class="lang-switch" href="/services/remote-sensing/" lang="ar" hreflang="ar">العربية</a>
-<a class="button" href="/en/request/">Request a service</a>
+<a class="lang-switch" href="/services/remote-sensing/" lang="ar" hreflang="ar" data-lang="ar">العربية</a>
+<a class="button button-small" href="/en/request/"><span class="label-long">Request a service</span><span class="label-short">Request</span></a>
 </div>
 </div>
 </header>
 <main id="main">
 <section class="masthead field-navy">
-<div class="wrap">
+<span class="masthead-art" aria-hidden="true"></span>
+<div class="wrap masthead-inner">
 <nav class="crumbs" aria-label="Breadcrumb"><ol role="list"><li><a href="/en/services/">Services</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li></ol></nav>
-<h1>Remote Sensing Analysis</h1>
-<div class="masthead-body"><p class="lead">Analysis of open Sentinel-2 and Landsat imagery for water, agriculture and change detection, answering one defined question: what changed on the ground, and when.</p><div class="masthead-foot">
-<p class="fact"><strong class="fact-price">From USD 150</strong><span class="badge badge-direct">Delivered by Madar</span></p>
+<h1 class="rise">Remote Sensing Analysis</h1>
+<div class="masthead-body rise"><p class="lead">Analysis of open Sentinel-2 and Landsat imagery for water, agriculture and change detection, answering one defined question: what changed on the ground, and when.</p><div class="masthead-foot">
+<p class="price">From USD 150</p><p><span class="badge badge-direct">Delivered by Madar</span></p>
 
 <a class="button" href="/en/request/">Request this service</a>
 </div></div>
 </div>
 </section>
-<section class="chapter field-sand"><div class="wrap split"><div><h2>The problem</h2><p class="statement">An organisation needs to know what changed on the ground and when, in vegetation, surface water, irrigation or urban growth, without a field visit and with a stated accuracy.</p></div><div><h2>Who it is for</h2><p>Development organisations and their contractors, environmental consultants, and researchers who need an analysis for a study.</p><p class="note">A starting price. The final price is written in a one-page offer.</p></div></div></section>
-<section class="chapter field-paper"><div class="wrap split"><div><h2>What you receive</h2><ul class="points" role="list"><li>An analysis report of 5 to 10 pages: question, data, method, results, limits.</li><li>Maps and time series of indices such as NDVI and water indices.</li><li>Result layers as GeoTIFF and GeoPackage.</li><li>An accuracy assessment with an error matrix where reference data exists.</li><li>Documented code, so the analysis can be rerun.</li></ul></div><div><h2>What you supply</h2><ul class="points" role="list"><li>The study area boundary.</li><li>The time period.</li><li>The question to be answered.</li><li>Any field or reference data.</li><li>The report format you need.</li></ul></div></div></section>
+<section class="chapter field-sand"><div class="wrap split"><div data-reveal><h2>The problem</h2><p class="statement">An organisation needs to know what changed on the ground and when, in vegetation, surface water, irrigation or urban growth, without a field visit and with a stated accuracy.</p></div><div data-reveal><h2>Who it is for</h2><p>Development organisations and their contractors, environmental consultants, and researchers who need an analysis for a study.</p><p class="note">A starting price. The final price is written in a one-page offer.</p></div></div></section>
+<section class="chapter field-paper"><div class="wrap split"><div data-reveal><h2>What you receive</h2><ul class="points" role="list"><li>An analysis report of 5 to 10 pages: question, data, method, results, limits.</li><li>Maps and time series of indices such as NDVI and water indices.</li><li>Result layers as GeoTIFF and GeoPackage.</li><li>An accuracy assessment with an error matrix where reference data exists.</li><li>Documented code, so the analysis can be rerun.</li></ul></div><div data-reveal><h2>What you supply</h2><ul class="points" role="list"><li>The study area boundary.</li><li>The time period.</li><li>The question to be answered.</li><li>Any field or reference data.</li><li>The report format you need.</li></ul></div></div></section>
 <section class="chapter field-teal" aria-labelledby="service-steps">
 <div class="wrap">
-<h2 id="service-steps">How the work goes</h2>
+<h2 id="service-steps" data-reveal>How the work goes</h2>
 <ol class="steps" role="list"><li>You fill in the request form, with the question, area, period and purpose.</li><li>We check image availability: coverage, cloud and the spatial resolution the question needs.</li><li>We send a one-page offer stating what the imagery can and cannot answer.</li><li>We prepare the data: collection choice, cloud masking, temporal compositing.</li><li>We compute the indices, the classification or the change detection.</li><li>We validate against reference data or higher-resolution imagery and compute the accuracy.</li><li>We produce the maps and charts and write the report.</li><li>We review the outputs against the checklist.</li><li>We deliver the report, the layers and the code, with an explanation call. The acceptance period is 7 days.</li></ol>
 </div>
 </section>
-<section class="chapter field-sand-deep"><div class="wrap split"><div><h2>Accuracy and limits statement</h2><blockquote class="limits">Results are derived from Sentinel-2 imagery at 10 m or Landsat at 30 m on the stated dates. Indices are indirect measurements, not field measurements. Results must not be used to estimate crop yield or water volume without field data. Classification accuracy is as stated in the report; without reference data the result is exploratory.</blockquote></div><div><h2>Out of scope</h2><ul class="points" role="list"><li>Field work</li><li>Buying commercial imagery</li><li>Signed hydrology studies</li><li>A hosted monitoring platform</li><li>Subscription farm monitoring</li></ul></div></div></section>
+<section class="chapter field-sand-deep"><div class="wrap split"><div data-reveal><h2>Accuracy and limits statement</h2><blockquote class="limits">Results are derived from Sentinel-2 imagery at 10 m or Landsat at 30 m on the stated dates. Indices are indirect measurements, not field measurements. Results must not be used to estimate crop yield or water volume without field data. Classification accuracy is as stated in the report; without reference data the result is exploratory.</blockquote></div><div data-reveal><h2>Out of scope</h2><ul class="points" role="list"><li>Field work</li><li>Buying commercial imagery</li><li>Signed hydrology studies</li><li>A hosted monitoring platform</li><li>Subscription farm monitoring</li></ul></div></div></section>
 <section class="chapter field-paper" aria-labelledby="service-related">
 <div class="wrap">
-<div class="chapter-head"><h2 id="service-related">Demos from the portfolio</h2><p>A demo built from open data, not a client project.</p></div>
-<ul class="cases" role="list"><li class="case">
-<a class="case-link" href="/en/portfolio/ndvi-change-pivot-farms/">
-<img src="/portfolio/ndvi-change-pivot-farms/vegetation_change.png" alt="Demo cover: Centre-pivot vegetation change in Tabarjal, Al-Jawf: March 2019 to March 2026" width="1600" height="1600" loading="lazy" decoding="async">
-<span class="case-title">Centre-pivot vegetation change in Tabarjal, Al-Jawf: March 2019 to March 2026</span>
+<div class="chapter-head" data-reveal><h2 id="service-related">Demos from the portfolio</h2><p>A demo built from open data, not a client project.</p></div>
+<ul class="tiles" role="list"><li class="tile" data-reveal>
+<a class="tile-link" href="/en/portfolio/ndvi-change-pivot-farms/">
+<span class="tile-media"><picture><source srcset="/portfolio/ndvi-change-pivot-farms/vegetation_change-960.webp" type="image/webp"><img src="/portfolio/ndvi-change-pivot-farms/vegetation_change.png" alt="Demo cover: Centre-pivot vegetation change in Tabarjal, Al-Jawf: March 2019 to March 2026" width="1600" height="1600" loading="lazy" decoding="async"></picture></span>
+<span class="tile-title">Centre-pivot vegetation change in Tabarjal, Al-Jawf: March 2019 to March 2026</span>
 </a>
-<p>Two Sentinel-2 scenes seven years apart show active vegetation (NDVI ≥ 0.3) in a 15 × 15 km window falling from 11,901 ha to 9,541 ha. 2,565 ha became active and 4,925 ha went inactive between the two dates.</p>
-<p class="case-demo">A demo built from open data, not a client project.</p>
+<p class="figure figure-small"><span class="figure-number" dir="ltr"><span data-count="2,360">2,360</span><span class="figure-unit">ha</span></span><span class="figure-label">net loss of active vegetation between 2019 and 2026</span></p>
+<p class="tile-meta"><span class="coords">30.08° N · 38.35° E</span><span>Demo</span></p>
 </li></ul>
 </div>
 </section>
-<section class="cta field-turquoise">
-<a class="cta-link" href="/en/request/">
-<p class="cta-text">A request form with fixed fields. Do not send data yet.</p>
-<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
-<h2 class="cta-word">Request</h2>
-</a>
+<section class="cta" aria-labelledby="cta-en">
+<div class="cta-side cta-side-image"><picture><source srcset="/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp" type="image/webp"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="Demo cover: Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh" width="1600" height="1437" loading="lazy" decoding="async"></picture></div>
+<div class="cta-tile field-turquoise" data-reveal>
+<h2 id="cta-en">Request a service</h2>
+<p>A request form with fixed fields. Do not send data yet.</p>
+<p><a class="button" href="/en/request/">Open the request form</a></p>
+</div>
+<div class="cta-side cta-side-mark field-navy"><svg class="cta-ring" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="32" rx="28" ry="9.5" transform="rotate(-22 32 32)"/><circle cx="32" cy="32" r="6"/></svg></div>
 </section>
 </main>
-<footer class="site-footer field-navy">
-<div class="wrap">
-<div class="footer-grid">
-<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
-<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li></ul></nav>
+<footer class="site-footer field-deep">
+<div class="wrap footer-close">
+<p class="footer-mark"><svg class="footer-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span class="footer-word">Madar</span></p>
+<p class="footer-slogan">Spatial data you can trust</p>
+</div>
+<div class="wrap footer-grid">
+<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com" dir="ltr">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li><li><a class="footer-lang" href="/services/remote-sensing/" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li></ul></nav>
 <nav class="footer-services" aria-label="Service categories"><h2>Service categories</h2><ul><li><a href="/en/services/category/data-quality/">Spatial Data and Quality</a></li><li><a href="/en/services/category/surveying-geodesy/">Surveying and Geodesy</a></li><li><a href="/en/services/category/photogrammetry-3d/">Photogrammetry, LiDAR and 3D</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li><li><a href="/en/services/category/geology-mining/">Geology and Mining</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li><li><a href="/en/services/category/environment-agriculture/">Environment and Agriculture</a></li><li><a href="/en/services/category/urban-realestate/">Urban Planning and Real Estate</a></li><li><a href="/en/services/category/transport-logistics/">Transport and Logistics</a></li><li><a href="/en/services/category/utilities-energy-telecom/">Utilities, Energy and Telecom</a></li><li><a href="/en/services/category/business-location/">Location Intelligence for Business</a></li><li><a href="/en/services/category/web-apps-automation/">Web GIS, Apps and Automation</a></li><li><a href="/en/services/category/cartography-reporting/">Cartography and Reporting</a></li><li><a href="/en/services/category/training-advisory/">Training and Advisory</a></li></ul></nav>
 </div>
-<div class="footer-legal">
-<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat.</p>
+<div class="wrap footer-legal">
+<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat. Maps: OpenFreeMap, OpenMapTiles and OpenStreetMap data; relief from Terrain Tiles; coastlines from Natural Earth; contour lines from NASADEM.</p>
 <a href="#top">Back to top</a>
 </div>
-</div>
-<p class="footer-name" aria-hidden="true">Madar</p>
 </footer>
+<script type="module" src="/assets/madar.js"></script>
 
 </body>
 </html>
