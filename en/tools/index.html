@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS tools: pre-delivery checks and batch processing | Madar</title>
+<meta name="description" content="Two command-line tools: Madar Quality Checker checks layers before handover, and Madar Automation Toolkit processes whole folders. What they do, their limits and starting prices.">
+<link rel="canonical" href="https://madargis.github.io/en/tools/">
+<link rel="alternate" hreflang="ar" href="https://madargis.github.io/tools/">
+<link rel="alternate" hreflang="en" href="https://madargis.github.io/en/tools/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/tools/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Madar Geospatial">
+<meta property="og:title" content="GIS tools: pre-delivery checks and batch processing | Madar">
+<meta property="og:description" content="Two command-line tools: Madar Quality Checker checks layers before handover, and Madar Automation Toolkit processes whole folders. What they do, their limits and starting prices.">
+<meta property="og:url" content="https://madargis.github.io/en/tools/">
+<meta property="og:image" content="https://madargis.github.io/assets/brand/og-1200x630.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/brand/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"Madar Geospatial","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/en/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"Spatial data you can trust","description":"A small digital office that delivers geospatial services remotely and builds tools that shorten everyday GIS work.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header field-navy" id="top">
+<div class="wrap bar">
+<a class="wordmark" href="/en/" aria-label="Madar: Home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>Madar</span></a>
+<nav class="nav" aria-label="Main navigation"><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/" aria-current="page">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li></ul></nav>
+<div class="bar-actions">
+<a class="lang-switch" href="/tools/" lang="ar" hreflang="ar">العربية</a>
+<a class="button" href="/en/request/">Request a service</a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="masthead masthead-large field-navy">
+<div class="wrap">
+
+<h1>Tools</h1>
+<div class="masthead-body"><p class="lead">Two command-line tools written in Python. They run on your files, on your machine.</p></div>
+</div>
+</section>
+<section class="chapter field-sand" id="quality-checker" aria-labelledby="quality-checker-name">
+<div class="wrap">
+<div class="split">
+<div class="tool-intro">
+<h2 id="quality-checker-name" lang="en" dir="ltr">Madar Quality Checker</h2>
+<p class="statement">A pre-delivery check with a report in Arabic and English</p>
+<p>Checks a parcel or survey layer before it is handed over, and writes a report in Arabic and English.</p>
+<p>The report folder receives issues.csv, one line per problem, and report.html, a summary in both languages.</p>
+<p class="fact"><strong>From USD 100 per organisation</strong></p>
+<p><a class="button" href="/en/request/">Request the tool</a></p>
+<p class="note">Request the tool through the request form by choosing “a ready-made tool”.</p>
+</div>
+<div class="tool-table"><table>
+<caption>What it checks</caption>
+<thead><tr><th scope="col">Check</th><th scope="col">What it needs</th></tr></thead>
+<tbody><tr><th scope="row">Coordinate reference system</th><td><code dir="ltr">--epsg</code> or <code dir="ltr">--profile</code> to compare against</td></tr><tr><th scope="row">Empty geometry</th><td>always runs</td></tr><tr><th scope="row">Invalid geometry</th><td>always runs</td></tr><tr><th scope="row">Duplicate geometry</th><td>always runs</td></tr><tr><th scope="row">Overlapping polygons</th><td>always runs</td></tr><tr><th scope="row">Missing required attribute</th><td><code dir="ltr">--required</code></td></tr><tr><th scope="row">Duplicate identifier</th><td><code dir="ltr">--id-field</code></td></tr><tr><th scope="row">Recorded area differs from geometry</th><td><code dir="ltr">--area-field</code></td></tr></tbody>
+</table></div>
+</div>
+<h3>Example run</h3>
+<pre dir="ltr" lang="en" tabindex="0" aria-label="Example run: Madar Quality Checker"><code>python quality_checker.py --input parcels.gpkg --report out --profile ksa-grf17 --id-field parcel_id --required owner land_use --area-field area_m2</code></pre>
+<div class="split">
+<div><h3>What you should know</h3><ul class="points" role="list"><li>Row numbers start at 0 and follow the order of features in the file.</li><li>Layers in geographic coordinates are measured in the UTM zone of the layer centre.</li><li>Invalid polygons are reported but left out of the overlap check.</li><li>Only the first layer of a multi-layer GeoPackage is read.</li><li>Gaps between neighbouring parcels are not checked yet.</li><li>Issue details are written in English. Check names are in both languages.</li><li>The report checks data consistency only. It is not an official survey deliverable.</li></ul></div>
+<div><h3>Testing</h3><p>Tested with Python 3.11, geopandas 1.2, shapely 2.2 and pyogrio 0.13 on Windows.</p></div>
+</div>
+</div>
+</section>
+<section class="chapter field-paper" id="automation-toolkit" aria-labelledby="automation-toolkit-name">
+<div class="wrap">
+<div class="split">
+<div class="tool-intro">
+<h2 id="automation-toolkit-name" lang="en" dir="ltr">Madar Automation Toolkit</h2>
+<p class="statement">Six commands that process whole folders</p>
+<p>Six batch commands for everyday GIS work, run from the command line on a folder of files.</p>
+<p>reproject, clip and convert read a folder and write to another folder. merge writes one file, area writes a CSV table and ndvi writes a GeoTIFF.</p>
+<p class="fact"><strong>From USD 49 per individual</strong></p>
+<p><a class="button" href="/en/request/">Request the tool</a></p>
+<p class="note">Request the tool through the request form by choosing “a ready-made tool”.</p>
+</div>
+<div class="tool-table"><table>
+<caption>The six commands</caption>
+<thead><tr><th scope="col">Command</th><th scope="col">What it does</th></tr></thead>
+<tbody><tr><th scope="row">reproject</th><td>Reprojects every vector file in a folder</td></tr><tr><th scope="row">clip</th><td>Clips every file to a boundary polygon</td></tr><tr><th scope="row">convert</th><td>Converts between SHP, GPKG and GeoJSON</td></tr><tr><th scope="row">merge</th><td>Merges all files into one and adds a src_file column</td></tr><tr><th scope="row">area</th><td>Area and perimeter report with a valid flag per feature</td></tr><tr><th scope="row">ndvi</th><td>NDVI raster from red and near-infrared bands</td></tr></tbody>
+</table></div>
+</div>
+<h3>Example run</h3>
+<pre dir="ltr" lang="en" tabindex="0" aria-label="Example run: Madar Automation Toolkit"><code>python gis_toolkit.py reproject --input data --output out --epsg 32638</code></pre>
+<div class="split">
+<div><h3>What you should know</h3><ul class="points" role="list"><li>A source file is never overwritten. If the output would replace an input, the command stops and names the files.</li><li>One unreadable file does not stop a batch: it is printed as FAIL, the rest are processed, and the command ends with an error code.</li><li>Layers without a coordinate system are rejected by reproject, clip, merge and area.</li><li>area measures in the UTM zone of the layer centre unless <code dir="ltr">--epsg</code> is given. For a layer wider than 6 degrees it prints a warning, because areas far from the centre can be off by about 2%.</li><li>ndvi reads both bands fully into memory. One Sentinel-2 tile needs about 2 GB.</li><li>Only the first layer of a multi-layer GeoPackage is read.</li></ul></div>
+<div><h3>Testing</h3><p>Tested with Python 3.11, geopandas 1.2, rasterio 1.4 and pyogrio 0.13 on Windows.</p></div>
+</div>
+</div>
+</section>
+<section class="cta field-turquoise">
+<a class="cta-link" href="/en/request/">
+<p class="cta-text">A request form with fixed fields. Do not send data yet.</p>
+<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
+<h2 class="cta-word">Request</h2>
+</a>
+</section>
+</main>
+<footer class="site-footer field-navy">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li></ul></nav>
+<nav class="footer-services" aria-label="Service categories"><h2>Service categories</h2><ul><li><a href="/en/services/category/data-quality/">Spatial Data and Quality</a></li><li><a href="/en/services/category/surveying-geodesy/">Surveying and Geodesy</a></li><li><a href="/en/services/category/photogrammetry-3d/">Photogrammetry, LiDAR and 3D</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li><li><a href="/en/services/category/geology-mining/">Geology and Mining</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li><li><a href="/en/services/category/environment-agriculture/">Environment and Agriculture</a></li><li><a href="/en/services/category/urban-realestate/">Urban Planning and Real Estate</a></li><li><a href="/en/services/category/transport-logistics/">Transport and Logistics</a></li><li><a href="/en/services/category/utilities-energy-telecom/">Utilities, Energy and Telecom</a></li><li><a href="/en/services/category/business-location/">Location Intelligence for Business</a></li><li><a href="/en/services/category/web-apps-automation/">Web GIS, Apps and Automation</a></li><li><a href="/en/services/category/cartography-reporting/">Cartography and Reporting</a></li><li><a href="/en/services/category/training-advisory/">Training and Advisory</a></li></ul></nav>
+</div>
+<div class="footer-legal">
+<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat.</p>
+<a href="#top">Back to top</a>
+</div>
+</div>
+<p class="footer-name" aria-hidden="true">Madar</p>
+</footer>
+
+</body>
+</html>

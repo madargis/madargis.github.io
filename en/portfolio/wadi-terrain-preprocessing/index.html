@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh | Madar portfolio</title>
+<meta name="description" content="From the 30 m NASADEM elevation model we derived flow direction, flow accumulation, the stream network and the catchment above an outlet near Al-Uyaynah. The catchment covers 414 km² and its longest flow path is 63.6 km.">
+<link rel="canonical" href="https://madargis.github.io/en/portfolio/wadi-terrain-preprocessing/">
+<link rel="alternate" hreflang="ar" href="https://madargis.github.io/portfolio/wadi-terrain-preprocessing/">
+<link rel="alternate" hreflang="en" href="https://madargis.github.io/en/portfolio/wadi-terrain-preprocessing/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/portfolio/wadi-terrain-preprocessing/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Madar Geospatial">
+<meta property="og:title" content="Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh | Madar portfolio">
+<meta property="og:description" content="From the 30 m NASADEM elevation model we derived flow direction, flow accumulation, the stream network and the catchment above an outlet near Al-Uyaynah. The catchment covers 414 km² and its longest flow path is 63.6 km.">
+<meta property="og:url" content="https://madargis.github.io/en/portfolio/wadi-terrain-preprocessing/">
+<meta property="og:image" content="https://madargis.github.io/portfolio/wadi-terrain-preprocessing/catchment_streams.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/brand/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.css" integrity="sha256-qx5w1Z7EBGW65+cDDaLzzPKBM/1QLmK9WY7vut/XpzI=" crossorigin="anonymous">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"Madar Geospatial","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/en/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"Spatial data you can trust","description":"A small digital office that delivers geospatial services remotely and builds tools that shorten everyday GIS work.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header field-navy" id="top">
+<div class="wrap bar">
+<a class="wordmark" href="/en/" aria-label="Madar: Home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>Madar</span></a>
+<nav class="nav" aria-label="Main navigation"><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/" aria-current="true">Portfolio</a></li><li><a href="/en/about/">About</a></li></ul></nav>
+<div class="bar-actions">
+<a class="lang-switch" href="/portfolio/wadi-terrain-preprocessing/" lang="ar" hreflang="ar">العربية</a>
+<a class="button" href="/en/request/">Request a service</a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="masthead field-navy">
+<div class="wrap">
+
+<h1>Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh</h1>
+<div class="masthead-body"><p class="lead">From the 30 m NASADEM elevation model we derived flow direction, flow accumulation, the stream network and the catchment above an outlet near Al-Uyaynah. The catchment covers 414 km² and its longest flow path is 63.6 km.</p><div class="masthead-foot"><p class="regulated"><mark>A demo built from open data, not a client project.</mark></p><p class="fact"><span class="fact-note">Demo date</span><strong><time datetime="2026-11-20">2026-11-20</time></strong></p><p class="fact"><span class="fact-note">Related service</span><a href="/en/services/hydrology-support/">GIS Support for Hydrology Studies</a></p></div></div>
+</div>
+</section>
+<figure class="cover field-navy"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="Demo cover: Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh" width="1600" height="1437" decoding="async"></figure>
+<section class="chapter field-sand"><div class="wrap split"><div><h2>The problem</h2><p>A qualified office preparing a hydrology study needs a conditioned DEM, the catchment boundary, its streams and its shape parameters quickly, with a stated source and accuracy, before its engineer starts the analysis and modelling.</p></div><div><h2>The data</h2><p>NASADEM_HGT version 001 by NASA JPL (2020): 1 arc-second (about 30 m) elevations from the SRTM flight of 11 to 21 February 2000, reprocessed by NASA, in whole metres above the EGM96 geoid, tiles n24e045, n24e046, n25e045 and n25e046. Only a window was read from the cloud-optimised GeoTIFFs on Microsoft Planetary Computer (collection nasadem, no account) on 20 November 2026. Licence: openly shared without restriction under the NASA EOSDIS Data Use and Citation Guidance. Citation: NASA JPL. (2020). NASADEM Merged DEM Global 1 arc second V001 [Data set]. NASA Land Processes Distributed Active Archive Center. https://doi.org/10.5067/MEASURES/NASADEM/NASADEM_HGT.001. For comparison only: OpenStreetMap waterways through the Overpass API on 20 November 2026, © OpenStreetMap contributors, licence ODbL.</p></div></div></section>
+<section class="chapter field-paper"><div class="wrap split"><div><h2>The method</h2><ol class="steps" role="list"><li>Read a 46 × 40 km window (EPSG:32638, x 598000 to 644000, y 2731000 to 2771000) and reprojected it to 30 m cells by bilinear resampling.</li><li>Conditioned the DEM: filled single-cell pits, then filled depressions, then resolved flats. 416 cells in flats were left without a flow direction, so they were routed along the priority-flood path to the spill point.</li><li>Derived D8 flow direction and flow accumulation.</li><li>Chose an outlet on Wadi Hanifa at 46.4033° E, 24.9014° N, snapped it to the nearest cell draining at least 100 km², delineated the catchment above it and checked that it does not touch the window edge.</li><li>Streams: every cell draining 2 km² or more, recounted at 1 and 5 km² to measure the effect of the threshold.</li><li>Computed area, longest flow path (D8 distance along the path), relief (highest point minus outlet) and mean slope from the unfilled DEM.</li><li>Compared the streams with OpenStreetMap waterways inside the catchment using a 90 m distance in both directions.</li></ol></div><div><h2>The result</h2><p>Catchment area 414 km². Longest flow path 63.6 km. Elevation runs from 718 m at the outlet to 1,021 m, a relief of 303 m. Mean slope 5.8° (10.3%). Streams at the 2 km² threshold total 290 km in 119 segments, a drainage density of 0.70 km/km²; the length is 390 km at 1 km² and 194 km at 5 km². Conditioning raised 11.5% of the catchment cells, by up to 15.0 m, mostly small pits scattered over plains and wadi floors. 70% of the derived stream length lies within 90 m of an OpenStreetMap waterway, while only 37% of the 541 km of OpenStreetMap waterways lies near a derived stream, because OpenStreetMap includes gullies smaller than the threshold.</p></div></div></section>
+<section class="chapter field-sand-deep"><div class="wrap split"><div><h2>Limits</h2><blockquote class="limits">Demonstration on open data, not a client project. This is terrain pre-processing that supports a hydrology study prepared and signed by a qualified office. It is not a hydrology study or a flood study: there is no rainfall, discharge or water depth. The NASADEM user guide (NASA JPL, 2020) gives the SRTM requirement as 16 m absolute vertical error at 90% and a global average absolute height error of about 6.8 m; heights are stored in whole metres. It is a radar surface model of February 2000: later dams, roads and buildings are missing, and NASA filled radar voids mainly from ASTER GDEM. On this flat plateau the result depends on how flats are routed: without routing the 416 cells the flow stops at a flat near the Al-Haisiyah dam and the catchment is 261 km². The Al-Haisiyah dam mapped in OpenStreetMap lies inside the catchment, and dams, bridges and culverts can change flow paths or the divide. D8 paths follow 30 m cells, and slope computed from them is lower than the true slope on steep faces. The boundary and outlet must be checked against a field survey and recent imagery before any use.</blockquote></div><div><h2>Tools</h2><ul class="points" role="list"><li>Python 3.11</li><li>pystac-client</li><li>planetary-computer</li><li>rasterio</li><li>pysheds</li><li>pyflwdir</li><li>NumPy</li><li>SciPy</li><li>Shapely</li><li>pyproj</li><li>Matplotlib</li></ul></div></div></section>
+<section class="chapter field-paper" aria-labelledby="case-images">
+<div class="wrap">
+<h2 id="case-images">Demo images</h2>
+<div class="gallery"><figure><img src="/portfolio/wadi-terrain-preprocessing/conditioning_fill_depth.png" alt="Image from the demo 2: Terrain pre-processing for the upper Wadi Hanifa catchment at Al-Uyaynah, north-west of Riyadh" width="1600" height="1437" loading="lazy" decoding="async"></figure></div>
+</div>
+</section>
+
+<section class="chapter field-sand" aria-labelledby="case-map" data-map-section hidden>
+<div class="wrap">
+<h2 id="case-map">Interactive map</h2>
+<div class="map" dir="ltr" role="region" aria-label="Interactive map of the demo layer" data-map data-geojson="/portfolio/wadi-terrain-preprocessing/catchment_streams.geojson" data-tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png" data-attribution="&lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;© OpenStreetMap contributors&lt;/a&gt;"></div>
+<p class="note">The demo layer over an OpenStreetMap basemap. <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></p>
+</div>
+</section>
+<div class="back field-paper"><div class="wrap"><a class="button" href="/en/portfolio/">All demos</a></div></div>
+<section class="cta field-turquoise">
+<a class="cta-link" href="/en/request/">
+<p class="cta-text">A request form with fixed fields. Do not send data yet.</p>
+<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
+<h2 class="cta-word">Request</h2>
+</a>
+</section>
+</main>
+<footer class="site-footer field-navy">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li></ul></nav>
+<nav class="footer-services" aria-label="Service categories"><h2>Service categories</h2><ul><li><a href="/en/services/category/data-quality/">Spatial Data and Quality</a></li><li><a href="/en/services/category/surveying-geodesy/">Surveying and Geodesy</a></li><li><a href="/en/services/category/photogrammetry-3d/">Photogrammetry, LiDAR and 3D</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li><li><a href="/en/services/category/geology-mining/">Geology and Mining</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li><li><a href="/en/services/category/environment-agriculture/">Environment and Agriculture</a></li><li><a href="/en/services/category/urban-realestate/">Urban Planning and Real Estate</a></li><li><a href="/en/services/category/transport-logistics/">Transport and Logistics</a></li><li><a href="/en/services/category/utilities-energy-telecom/">Utilities, Energy and Telecom</a></li><li><a href="/en/services/category/business-location/">Location Intelligence for Business</a></li><li><a href="/en/services/category/web-apps-automation/">Web GIS, Apps and Automation</a></li><li><a href="/en/services/category/cartography-reporting/">Cartography and Reporting</a></li><li><a href="/en/services/category/training-advisory/">Training and Advisory</a></li></ul></nav>
+</div>
+<div class="footer-legal">
+<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat.</p>
+<a href="#top">Back to top</a>
+</div>
+</div>
+<p class="footer-name" aria-hidden="true">Madar</p>
+</footer>
+<script src="https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.js" integrity="sha256-qcniqjbU1bY7Ex8nwScvGiiIPu7MDt3R4Nv65AM7x8k=" crossorigin="anonymous" defer></script>
+<script src="/assets/map.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAD to GIS and Ain el Abd to KSA-GRF17 transformation, a Riyadh block | Madar portfolio</title>
+<meta name="description" content="We read a layered DXF in Ain el Abd and rebuilt it as attributed GIS layers in a KSA-GRF17 GeoPackage. Relabelling the coordinates instead of transforming them moves every vertex by 75.7 m.">
+<link rel="canonical" href="https://madargis.github.io/en/portfolio/cad-to-gis-riyadh-block/">
+<link rel="alternate" hreflang="ar" href="https://madargis.github.io/portfolio/cad-to-gis-riyadh-block/">
+<link rel="alternate" hreflang="en" href="https://madargis.github.io/en/portfolio/cad-to-gis-riyadh-block/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/portfolio/cad-to-gis-riyadh-block/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Madar Geospatial">
+<meta property="og:title" content="CAD to GIS and Ain el Abd to KSA-GRF17 transformation, a Riyadh block | Madar portfolio">
+<meta property="og:description" content="We read a layered DXF in Ain el Abd and rebuilt it as attributed GIS layers in a KSA-GRF17 GeoPackage. Relabelling the coordinates instead of transforming them moves every vertex by 75.7 m.">
+<meta property="og:url" content="https://madargis.github.io/en/portfolio/cad-to-gis-riyadh-block/">
+<meta property="og:image" content="https://madargis.github.io/portfolio/cad-to-gis-riyadh-block/datum_offset_map.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/brand/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"Madar Geospatial","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/en/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"Spatial data you can trust","description":"A small digital office that delivers geospatial services remotely and builds tools that shorten everyday GIS work.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header field-navy" id="top">
+<div class="wrap bar">
+<a class="wordmark" href="/en/" aria-label="Madar: Home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>Madar</span></a>
+<nav class="nav" aria-label="Main navigation"><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/" aria-current="true">Portfolio</a></li><li><a href="/en/about/">About</a></li></ul></nav>
+<div class="bar-actions">
+<a class="lang-switch" href="/portfolio/cad-to-gis-riyadh-block/" lang="ar" hreflang="ar">العربية</a>
+<a class="button" href="/en/request/">Request a service</a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="masthead field-navy">
+<div class="wrap">
+
+<h1>CAD to GIS and Ain el Abd to KSA-GRF17 transformation, a Riyadh block</h1>
+<div class="masthead-body"><p class="lead">We read a layered DXF in Ain el Abd and rebuilt it as attributed GIS layers in a KSA-GRF17 GeoPackage. Relabelling the coordinates instead of transforming them moves every vertex by 75.7 m.</p><div class="masthead-foot"><p class="regulated"><mark>A demo built from open data, not a client project.</mark></p><p class="fact"><span class="fact-note">Demo date</span><strong><time datetime="2026-11-20">2026-11-20</time></strong></p><p class="fact"><span class="fact-note">Related service</span><a href="/en/services/cad-to-gis/">CAD to GIS Conversion and Coordinate Transformation</a></p></div></div>
+</div>
+</section>
+<figure class="cover field-navy"><img src="/portfolio/cad-to-gis-riyadh-block/datum_offset_map.png" alt="Demo cover: CAD to GIS and Ain el Abd to KSA-GRF17 transformation, a Riyadh block" width="1600" height="1000" decoding="async"></figure>
+<section class="chapter field-sand"><div class="wrap split"><div><h2>The problem</h2><p>Legacy CAD drawings arrive as lines and text with no attribute tables, in Ain el Abd. Authorities ask for GIS layers in KSA-GRF17. A common mistake is to give the coordinates the new system&#39;s name without transforming them.</p></div><div><h2>The data</h2><p>No open CAD drawing exists, so we made a stand-in: an OpenStreetMap extract (roads, buildings and land use in a 920 × 786 m box near Kingdom Centre, Riyadh) exported to a layered DXF in Ain el Abd / UTM 38N (EPSG:20438) with operation EPSG:1111 (stated accuracy 18 m). Downloaded through the Overpass API on 2026-11-20. Licence: ODbL, © OpenStreetMap contributors.</p></div></div></section>
+<section class="chapter field-paper"><div class="wrap split"><div><h2>The method</h2><ol class="steps" role="list"><li>Export the stand-in to DXF: one layer per road class and land use, one building layer, street names as text. Result: 18 layers.</li><li>Read the DXF with ezdxf, turn each closed polyline into its own polygon, and take the class from the layer name.</li><li>Join 89 street-name texts to the nearest road line, and compute length, area and geometry validity.</li><li>Transform to KSA-GRF17 / UTM 38N (EPSG:9358) with the pyproj operation Ain el Abd to KSA-GRF17 (1) (EPSG:9362).</li><li>Compare every vertex with a copy given the EPSG:9358 code without transformation, and measure the shift in metres.</li></ol></div><div><h2>The result</h2><p>A 3-layer GeoPackage: 176 road lines, 284 buildings, 8 land-use polygons, from 468 source features. 89 road lines took their street name from the CAD text. Invalid geometry: 0 (0 in the source). Open polylines on polygon layers: 0. Buildings inside another building, kept as separate polygons: 1. pyproj operation: Ain el Abd to KSA-GRF17 (1) (EPSG:9362), stated accuracy 2 m. Shift between correct transformation and relabelling: mean 75.67 m (range 75.65 to 75.69 m), bearing 275°, over 2,722 vertices. Round-trip difference from the original OpenStreetMap coordinates: 11.4 m.</p></div></div></section>
+<section class="chapter field-sand-deep"><div class="wrap split"><div><h2>Limits</h2><blockquote class="limits">Demonstration on open data, not a client project. The DXF is a clean stand-in made from OpenStreetMap, so it does not show the problems of real CAD drawings such as unclosed polylines, blocks and mixed layers. A closed polyline inside another is read as a separate polygon, not a hole; that is right here because the source has no holes, and may be wrong for another drawing. The more accurate operation EPSG:9363 (ARAMCO grid, 5 to 10 cm) is not available to pyproj on this machine, so the result is good to about 2 m. The 11.4 m round-trip difference comes from the two published operations EPSG:1111 and EPSG:9362 disagreeing, not from the method. No ground check points. Not an official survey deliverable.</blockquote></div><div><h2>Tools</h2><ul class="points" role="list"><li>Python</li><li>ezdxf</li><li>GeoPandas</li><li>Shapely</li><li>pyproj / PROJ 9.5.1</li><li>GeoPackage</li><li>Overpass API</li><li>Matplotlib</li></ul></div></div></section>
+<section class="chapter field-paper" aria-labelledby="case-images">
+<div class="wrap">
+<h2 id="case-images">Demo images</h2>
+<div class="gallery"><figure><img src="/portfolio/cad-to-gis-riyadh-block/rebuilt_layers_map.png" alt="Image from the demo 2: CAD to GIS and Ain el Abd to KSA-GRF17 transformation, a Riyadh block" width="1600" height="1000" loading="lazy" decoding="async"></figure></div>
+</div>
+</section>
+
+
+<div class="back field-paper"><div class="wrap"><a class="button" href="/en/portfolio/">All demos</a></div></div>
+<section class="cta field-turquoise">
+<a class="cta-link" href="/en/request/">
+<p class="cta-text">A request form with fixed fields. Do not send data yet.</p>
+<svg class="cta-arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="5"/></svg>
+<h2 class="cta-word">Request</h2>
+</a>
+</section>
+</main>
+<footer class="site-footer field-navy">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-contact"><h2>Contact</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="Pages"><h2>Pages</h2><ul><li><a href="/en/services/">Services</a></li><li><a href="/en/tools/">Tools</a></li><li><a href="/en/portfolio/">Portfolio</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/request/">Request a service</a></li></ul></nav>
+<nav class="footer-services" aria-label="Service categories"><h2>Service categories</h2><ul><li><a href="/en/services/category/data-quality/">Spatial Data and Quality</a></li><li><a href="/en/services/category/surveying-geodesy/">Surveying and Geodesy</a></li><li><a href="/en/services/category/photogrammetry-3d/">Photogrammetry, LiDAR and 3D</a></li><li><a href="/en/services/category/remote-sensing/">Remote Sensing</a></li><li><a href="/en/services/category/geology-mining/">Geology and Mining</a></li><li><a href="/en/services/category/hydrology-water/">Hydrology and Water</a></li><li><a href="/en/services/category/environment-agriculture/">Environment and Agriculture</a></li><li><a href="/en/services/category/urban-realestate/">Urban Planning and Real Estate</a></li><li><a href="/en/services/category/transport-logistics/">Transport and Logistics</a></li><li><a href="/en/services/category/utilities-energy-telecom/">Utilities, Energy and Telecom</a></li><li><a href="/en/services/category/business-location/">Location Intelligence for Business</a></li><li><a href="/en/services/category/web-apps-automation/">Web GIS, Apps and Automation</a></li><li><a href="/en/services/category/cartography-reporting/">Cartography and Reporting</a></li><li><a href="/en/services/category/training-advisory/">Training and Advisory</a></li></ul></nav>
+</div>
+<div class="footer-legal">
+<p>© 2026 Madar Geospatial. Open data used in the demos: OpenStreetMap under ODbL, Copernicus and Landsat.</p>
+<a href="#top">Back to top</a>
+</div>
+</div>
+<p class="footer-name" aria-hidden="true">Madar</p>
+</footer>
+
+</body>
+</html>
