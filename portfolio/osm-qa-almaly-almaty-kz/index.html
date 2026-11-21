@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js");document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(!window.madarReady)document.documentElement.classList.remove("js")},0)});(function(){var s;try{s=localStorage.getItem("madar-lang")}catch(e){s="unavailable"}var t=(function englishTarget({ path, search = '', hash = '', stored, referrer = '', origin = '', languages, userAgent = '' }) {
+  if (stored !== null && stored !== undefined) return null;
+  if (path === '/en' || path.startsWith('/en/')) return null;
+  if (/bot|crawl|spider|slurp|mediapartners|lighthouse|headless|preview|facebookexternalhit|embedly|whatsapp|telegram|discord|linkedin|pinterest|validator/i.test(userAgent)) return null;
+  if (origin && (referrer === `${origin}/en` || referrer.startsWith(`${origin}/en/`))) return null;
+  const list = (languages || []).filter((code) => typeof code === 'string' && code !== '');
+  if (!list.length || list.some((code) => /^ar(-|$)/i.test(code))) return null;
+  return `/en${path}${search}${hash}`;
+})({path:location.pathname,search:location.search,hash:location.hash,stored:s,referrer:document.referrer,origin:location.origin,languages:navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language],userAgent:navigator.userAgent});if(t){document.documentElement.style.visibility="hidden";location.replace(t)}})();</script>
+<title>تدقيق جودة مباني OpenStreetMap في حي ألمالي، ألماتي، كازاخستان | معرض أعمال مدار</title>
+<meta name="description" content="فحصت أداة Madar Quality Checker عدد 686 مبنى من OpenStreetMap في حي ألمالي، ألماتي ووجدت ملاحظة هندسية في 0 منها، و30.2% منها بلا اسم شارع.">
+<link rel="canonical" href="https://madargis.github.io/portfolio/osm-qa-almaly-almaty-kz/">
+<link rel="alternate" hreflang="ar" href="https://madargis.github.io/portfolio/osm-qa-almaly-almaty-kz/">
+<link rel="alternate" hreflang="en" href="https://madargis.github.io/en/portfolio/osm-qa-almaly-almaty-kz/">
+<link rel="alternate" hreflang="x-default" href="https://madargis.github.io/en/portfolio/osm-qa-almaly-almaty-kz/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="مدار للحلول الجيومكانية">
+<meta property="og:title" content="تدقيق جودة مباني OpenStreetMap في حي ألمالي، ألماتي، كازاخستان | معرض أعمال مدار">
+<meta property="og:description" content="فحصت أداة Madar Quality Checker عدد 686 مبنى من OpenStreetMap في حي ألمالي، ألماتي ووجدت ملاحظة هندسية في 0 منها، و30.2% منها بلا اسم شارع.">
+<meta property="og:url" content="https://madargis.github.io/portfolio/osm-qa-almaly-almaty-kz/">
+<meta property="og:image" content="https://madargis.github.io/portfolio/osm-qa-almaly-almaty-kz/issues_map.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/brand/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/brand/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://madargis.github.io/#organization","name":"مدار للحلول الجيومكانية","alternateName":["مدار","Madar"],"url":"https://madargis.github.io/","logo":"https://madargis.github.io/assets/brand/icon-512.png","slogan":"بيانات مكانية تثق فيها","description":"مكتب رقمي صغير يقدم خدمات جيومكانية تُسلَّم عن بعد، ويبني أدوات تختصر شغل GIS اليومي.","email":"madarmadargeospatial@gmail.com","sameAs":["https://www.youtube.com/@madargis"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header field-navy" id="top">
+<div class="bar">
+<a class="wordmark" href="/" aria-label="مدار: الصفحة الرئيسية"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span>مدار</span></a>
+<nav class="nav" aria-label="التنقل الرئيسي"><ul><li><a href="/services/">الخدمات</a></li><li><a href="/tools/">الأدوات</a></li><li><a href="/portfolio/" aria-current="true">معرض الأعمال</a></li><li><a href="/about/">عن مدار</a></li></ul></nav>
+<div class="bar-actions">
+<a class="lang-switch" href="/en/portfolio/osm-qa-almaly-almaty-kz/" lang="en" hreflang="en" data-lang="en">English</a>
+<a class="button button-small" href="/request/"><span class="label-long">اطلب خدمة</span><span class="label-short">اطلب خدمة</span></a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="masthead masthead-long field-navy">
+<span class="masthead-art" aria-hidden="true"></span>
+<div class="wrap masthead-inner">
+
+<h1 class="rise">تدقيق جودة مباني OpenStreetMap في حي ألمالي، ألماتي، كازاخستان</h1>
+<div class="masthead-body rise"><p class="lead">فحصت أداة Madar Quality Checker عدد 686 مبنى من OpenStreetMap في حي ألمالي، ألماتي ووجدت ملاحظة هندسية في 0 منها، و30.2% منها بلا اسم شارع.</p><div class="masthead-foot"><p class="regulated"><mark>نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل.</mark></p><p class="figure figure-masthead"><span class="figure-number" dir="ltr"><span data-count="0">0</span></span><span class="figure-label">من 686 مبنى في حي ألمالي، ألماتي فيها ملاحظة هندسية</span></p><dl class="facts"><div><dt>تاريخ النموذج</dt><dd><time datetime="2026-11-21">2026-11-21</time></dd></div><div><dt>موقع النموذج</dt><dd class="coords">43.25° ش · 76.94° ق</dd></div><div><dt>الخدمة المرتبطة</dt><dd><a href="/services/qa-audit/">تدقيق جودة البيانات المكانية وفحص الدقة</a></dd></div></dl></div></div>
+</div>
+</section>
+<figure class="cover field-navy"><img src="/portfolio/osm-qa-almaly-almaty-kz/issues_map.png" alt="غلاف النموذج: تدقيق جودة مباني OpenStreetMap في حي ألمالي، ألماتي، كازاخستان" width="1600" height="1398" fetchpriority="high" decoding="async"></figure>
+<section class="chapter field-sand"><div class="wrap split"><div data-reveal><h2>المشكلة</h2><p>فريق يريد استخدام مضلعات المباني المفتوحة في حي ألمالي، ألماتي لخريطة أساس أو مشروع عناوين أو نموذج تخطيط يحتاج أن يعرف مدى سلامة الهندسة واكتمال البيانات الوصفية قبل أن يعتمد عليها.</p></div><div data-reveal><h2>البيانات</h2><p>مباني OpenStreetMap (خطوط مغلقة وعلاقات متعددة المضلعات) في المربع من 76.9250 إلى 76.9450 شرقًا ومن 43.2450 إلى 43.2600 شمالًا (271 هكتار)، قُرئت عبر Overpass API يوم 21 نوفمبر 2026 (حالة القاعدة 2026-11-20)، © مساهمو OpenStreetMap، الترخيص ODbL.</p></div></div></section>
+<section class="chapter field-paper"><div class="wrap split"><div data-reveal><h2>المنهج</h2><ol class="steps" role="list"><li>تنزيل كل المباني من الخطوط والعلاقات متعددة المضلعات في المربع، والإبقاء على ما تقع نقطته الداخلية فيه.</li><li>بناء المضلعات من الخطوط المغلقة ومن الحلقات الخارجية والداخلية للعلاقات، واستبعاد خطوط المباني غير المغلقة التي لا تكوّن مضلعًا (عددها 0).</li><li>تشغيل Madar Quality Checker على الطبقة بنظام EPSG:4326، مع osm_id معرّفًا فريدًا، وaddr:street حقلًا إلزاميًا، وتجاهل التداخل الأصغر من 1 م².</li><li>عد الهندسة غير السليمة والمكررة والمتداخلة والمعرّفات المكررة وأسماء الشوارع الناقصة، وقياس نسبة المباني التي تحمل نوعًا محددًا وعدد طوابق.</li></ol></div><div data-reveal><h2>النتيجة</h2><p>686 مبنى بمساحة مسقط 56.5 هكتار. الهندسة: هندسة غير سليمة: 0، هندسة مكررة: 0، تداخل: 0، وتخص 0 من المباني. المعرّفات المكررة: 0. البيانات الوصفية: 207 مبنى (30.2%) بلا addr:street، و65.2% نوعها building=yes فقط، و43.7% فيها عدد الطوابق.</p></div></div></section>
+<section class="chapter field-sand-deep"><div class="wrap split"><div data-reveal><h2>الحدود</h2><blockquote class="limits">نموذج توضيحي ببيانات مفتوحة، وليس مشروعًا لعميل. التدقيق يفحص اتساق الطبقة المفتوحة لا مطابقتها للواقع: قد يكون المضلع سليمًا ومع ذلك منزاحًا أو قديمًا أو ناقصًا. OpenStreetMap يحرره متطوعون ويتغير يوميًا، فهذه الأعداد تصف حالة القاعدة المذكورة فقط. كثير من المباني في الواقع بلا عنوان شارع أصلًا، فغياب addr:street نقص لمشروع عناوين وليس خطأ دائمًا. لم يُحتسب التداخل الأصغر من 1 م². هذا ليس مخرجًا مساحيًا رسميًا.</blockquote></div><div data-reveal><h2>الأدوات</h2><ul class="points" role="list"><li>Python 3.11</li><li>Madar Quality Checker</li><li>GeoPandas</li><li>Shapely</li><li>pandas</li><li>Matplotlib</li></ul></div></div></section>
+<section class="chapter field-deep case-map" aria-labelledby="case-map" data-map-section>
+<div class="wrap">
+<div class="chapter-head" data-reveal><h2 id="case-map">الخريطة التفاعلية</h2><p>طبقة النموذج فوق خريطة أساس من OpenStreetMap وتضاريس مظللة. اسحب للتنقل، وكبّر بإصبعين أو بعجلة الفأرة مع زر Ctrl.</p></div>
+</div>
+<div class="map-frame">
+<div class="map" dir="ltr" role="region" aria-label="خريطة تفاعلية لطبقة النموذج" data-map data-geojson="/portfolio/osm-qa-almaly-almaty-kz/web_layer.geojson"></div>
+</div>
+<div class="wrap"><p class="map-credit">الخرائط الحية: <a href="https://www.openstreetmap.org/copyright">OpenFreeMap © OpenMapTiles, data © OpenStreetMap contributors</a>. Natural Earth. Relief: Terrain Tiles (Mapzen, AWS Open Data) from SRTM and GMTED2010 (USGS) and ETOPO1 (NOAA).</p></div>
+</section>
+<section class="chapter field-paper" aria-labelledby="case-images">
+<div class="wrap">
+<h2 id="case-images" data-reveal>صور النموذج</h2>
+<div class="gallery"><figure data-reveal><img src="/portfolio/osm-qa-almaly-almaty-kz/attribute_map.png" alt="صورة من النموذج 2: تدقيق جودة مباني OpenStreetMap في حي ألمالي، ألماتي، كازاخستان" width="1600" height="1398" loading="lazy" decoding="async"></figure></div>
+</div>
+</section>
+
+<div class="back field-paper"><div class="wrap"><a class="link-arrow link-back" href="/portfolio/">كل النماذج</a></div></div>
+<section class="cta" aria-labelledby="cta-ar">
+<div class="cta-side cta-side-image"><picture><source srcset="/portfolio/wadi-terrain-preprocessing/catchment_streams-960.webp" type="image/webp"><img src="/portfolio/wadi-terrain-preprocessing/catchment_streams.png" alt="غلاف النموذج: تجهيز التضاريس لحوض وادي حنيفة الأعلى عند العيينة، شمال غرب الرياض" width="1600" height="1242" loading="lazy" decoding="async"></picture></div>
+<div class="cta-tile field-turquoise" data-reveal>
+<h2 id="cta-ar">اطلب خدمة</h2>
+<p>نموذج طلب بحقول ثابتة. لا ترسل بيانات الآن.</p>
+<p><a class="button" href="/request/">افتح نموذج الطلب</a></p>
+</div>
+<div class="cta-side cta-side-mark field-navy"><svg class="cta-ring" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="32" rx="28" ry="9.5" transform="rotate(-22 32 32)"/><circle cx="32" cy="32" r="6"/></svg></div>
+</section>
+</main>
+<footer class="site-footer field-deep">
+<div class="wrap footer-close">
+<p class="footer-mark"><svg class="footer-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="mark-ring" d="M58.89 15.64A29 9.5 -22 0 0 5.11 37.36"/><path class="mark-pin" d="M32 54C27 45.5 20 37.5 20 25a12 12 0 1 1 24 0c0 12.5-7 20.5-12 29ZM32 20.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z"/><path class="mark-ring" d="M5.11 37.36A29 9.5 -22 0 0 58.89 15.64"/></svg><span class="footer-word">مدار</span></p>
+<p class="footer-slogan">بيانات مكانية تثق فيها</p>
+</div>
+<div class="wrap footer-grid">
+<div class="footer-contact"><h2>التواصل</h2><ul><li><a href="mailto:madarmadargeospatial@gmail.com" dir="ltr">madarmadargeospatial@gmail.com</a></li><li><a href="https://www.youtube.com/@madargis" rel="noopener me">YouTube</a></li></ul></div>
+<nav aria-label="الصفحات"><h2>الصفحات</h2><ul><li><a href="/services/">الخدمات</a></li><li><a href="/tools/">الأدوات</a></li><li><a href="/portfolio/">معرض الأعمال</a></li><li><a href="/about/">عن مدار</a></li><li><a href="/request/">اطلب خدمة</a></li><li><a class="footer-lang" href="/en/portfolio/osm-qa-almaly-almaty-kz/" lang="en" hreflang="en" data-lang="en">English</a></li></ul></nav>
+<nav class="footer-services" aria-label="فئات الخدمات"><h2>فئات الخدمات</h2><ul><li><a href="/services/category/data-quality/">البيانات المكانية وجودتها</a></li><li><a href="/services/category/surveying-geodesy/">المساحة والجيوديسيا</a></li><li><a href="/services/category/photogrammetry-3d/">التصوير المساحي والليدار والنماذج ثلاثية الأبعاد</a></li><li><a href="/services/category/remote-sensing/">الاستشعار عن بعد</a></li><li><a href="/services/category/geology-mining/">الجيولوجيا والتعدين</a></li><li><a href="/services/category/hydrology-water/">الهيدرولوجيا والمياه</a></li><li><a href="/services/category/environment-agriculture/">البيئة والزراعة</a></li><li><a href="/services/category/urban-realestate/">التخطيط العمراني والعقار</a></li><li><a href="/services/category/transport-logistics/">النقل واللوجستيات</a></li><li><a href="/services/category/utilities-energy-telecom/">المرافق والطاقة والاتصالات</a></li><li><a href="/services/category/business-location/">ذكاء الموقع للأعمال</a></li><li><a href="/services/category/web-apps-automation/">التطبيقات والأتمتة ولوحات المعلومات</a></li><li><a href="/services/category/cartography-reporting/">الخرائط والتقارير</a></li><li><a href="/services/category/training-advisory/">التدريب والاستشارات</a></li></ul></nav>
+</div>
+<div class="wrap footer-legal">
+<p>© 2026 مدار للحلول الجيومكانية. البيانات المفتوحة في النماذج: OpenStreetMap برخصة ODbL، و Copernicus، و Landsat. الخرائط: OpenFreeMap و OpenMapTiles وبيانات OpenStreetMap، والتضاريس من Terrain Tiles، والسواحل من Natural Earth، وخطوط الكنتور من NASADEM.</p>
+<a href="#top">إلى أعلى الصفحة</a>
+</div>
+</footer>
+<script type="module" src="/assets/madar.js"></script>
+<script type="application/json" id="madar-map">{"scriptUrl":"https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.js","scriptIntegrity":"sha256-qcniqjbU1bY7Ex8nwScvGiiIPu7MDt3R4Nv65AM7x8k=","styleUrl":"https://unpkg.com/maplibre-gl@5.24.1/dist/maplibre-gl.css","styleIntegrity":"sha256-qx5w1Z7EBGW65+cDDaLzzPKBM/1QLmK9WY7vut/XpzI=","vector":"https://tiles.openfreemap.org/planet","glyphs":"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf","rtlPlugin":"https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.3.0/dist/mapbox-gl-rtl-text.js","rtlPluginIntegrity":"sha384-gHAz8LjU4G81gHzalWNF5uIP0VHZYTwqHrYDKIHbc2L4IFafxWBVWR0/I9NIaHuj","terrain":"https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png","attribution":"OpenFreeMap © OpenMapTiles, data © OpenStreetMap contributors","attributionUrl":"https://www.openstreetmap.org/copyright","terrainAttribution":"Relief: Terrain Tiles (Mapzen, AWS Open Data) from SRTM and GMTED2010 (USGS) and ETOPO1 (NOAA)","land":"/assets/world.json","landAttribution":"Natural Earth","center":[45,24]}</script>
+<script type="module" src="/assets/maps.js"></script>
+</body>
+</html>
